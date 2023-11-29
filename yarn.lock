@@ -1174,7 +1174,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.54.0":
+"eslint@npm:latest":
   version: 8.54.0
   resolution: "eslint@npm:8.54.0"
   dependencies:
@@ -1577,6 +1577,15 @@ __metadata:
   dependencies:
     function-bind: "npm:^1.1.2"
   checksum: 5d415b114f410661208c95e7ab4879f1cc2765b8daceff4dc8718317d1cb7b9ffa7c5d1eafd9a4389c9aab7445d6ea88e05f3096cb1e529618b55304956b87fc
+  languageName: node
+  linkType: hard
+
+"husky@npm:^8.0.0":
+  version: 8.0.3
+  resolution: "husky@npm:8.0.3"
+  bin:
+    husky: lib/bin.js
+  checksum: 6722591771c657b91a1abb082e07f6547eca79144d678e586828ae806499d90dce2a6aee08b66183fd8b085f19d20e0990a2ad396961746b4c8bd5bdb619d668
   languageName: node
   linkType: hard
 
@@ -2249,6 +2258,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pinst@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "pinst@npm:3.0.0"
+  bin:
+    pinst: bin.js
+  checksum: abb1ed62ea2acb2207a7a860715bdb26ecbde74ede8fad5f6200194f3e22db25e2b7a49af05e5cc7fc05384709c651e0000323f0077d7239060c4b68c8acd428
+  languageName: node
+  linkType: hard
+
 "prelude-ls@npm:^1.2.1":
   version: 1.2.1
   resolution: "prelude-ls@npm:1.2.1"
@@ -2256,7 +2274,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.1.0":
+"prettier@npm:latest":
   version: 3.1.0
   resolution: "prettier@npm:3.1.0"
   bin:
@@ -2829,9 +2847,11 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^6.13.1"
     "@typescript-eslint/parser": "npm:^6.13.1"
     esbuild: "npm:^0.19.8"
-    eslint: "npm:^8.54.0"
+    eslint: "npm:latest"
     eslint-plugin-react: "npm:^7.33.2"
-    prettier: "npm:^3.1.0"
+    husky: "npm:^8.0.0"
+    pinst: "npm:^3.0.0"
+    prettier: "npm:latest"
     typescript: "npm:latest"
   languageName: unknown
   linkType: soft
