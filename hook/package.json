@@ -1,0 +1,9 @@
+{
+  "name": "hook",
+  "scripts": {
+    "build": "echo hello world"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}

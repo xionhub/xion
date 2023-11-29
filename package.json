@@ -2,10 +2,10 @@
   "name": "yarn-workspace",
   "packageManager": "yarn@4.0.2",
   "scripts": {
-    "build": "tsc",
     "postinstall": "husky install",
     "prepack": "pinst --disable",
-    "postpack": "pinst --enable"
+    "postpack": "pinst --enable",
+    "check": "yarn workspaces list --json"
   },
   "devDependencies": {
     "@types/jest": "^29.5.10",
@@ -21,7 +21,8 @@
     "typescript": "latest"
   },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "./hook"
   ],
   "dependencies": {
     "esbuild": "^0.19.8"
