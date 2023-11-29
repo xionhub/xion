@@ -1,0 +1,10 @@
+.gitignore
+.yarn
+.pnp.*
+
+
+build
+coverage
+dist
+lib
+.next

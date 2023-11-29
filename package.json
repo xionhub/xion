@@ -5,6 +5,7 @@
     "build": "tsc"
   },
   "devDependencies": {
+    "prettier": "^3.1.0",
     "typescript": "latest"
   },
   "workspaces": [
