@@ -562,6 +562,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@xion/react-hook@workspace:packages/react-hook":
+  version: 0.0.0-use.local
+  resolution: "@xion/react-hook@workspace:packages/react-hook"
+  dependencies:
+    esbuild: "npm:^0.19.8"
+    react: "npm:^18.2.0"
+    typescript: "npm:^5.3.2"
+  peerDependencies:
+    "@types/react": ">=18.2.0"
+    react: ">=18.2.0"
+    react-dom: ">=18.2.0"
+  languageName: unknown
+  linkType: soft
+
 "acorn-jsx@npm:^5.3.2":
   version: 5.3.2
   resolution: "acorn-jsx@npm:5.3.2"
@@ -1580,14 +1594,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hook@workspace:hook":
-  version: 0.0.0-use.local
-  resolution: "hook@workspace:hook"
-  dependencies:
-    react: "npm:^18.2.0"
-  languageName: unknown
-  linkType: soft
-
 "husky@npm:^8.0.0":
   version: 8.0.3
   resolution: "husky@npm:8.0.3"
@@ -2327,6 +2333,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-dom@npm:^18.2.0":
+  version: 18.2.0
+  resolution: "react-dom@npm:18.2.0"
+  dependencies:
+    loose-envify: "npm:^1.1.0"
+    scheduler: "npm:^0.23.0"
+  peerDependencies:
+    react: ^18.2.0
+  checksum: 66dfc5f93e13d0674e78ef41f92ed21dfb80f9c4ac4ac25a4b51046d41d4d2186abc915b897f69d3d0ebbffe6184e7c5876f2af26bfa956f179225d921be713a
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -2455,6 +2473,15 @@ __metadata:
     get-intrinsic: "npm:^1.1.3"
     is-regex: "npm:^1.1.4"
   checksum: 14a81a7e683f97b2d6e9c8be61fddcf8ed7a02f4e64a825515f96bb1738eb007145359313741d2704d28b55b703a0f6300c749dde7c1dbc13952a2b85048ede2
+  languageName: node
+  linkType: hard
+
+"scheduler@npm:^0.23.0":
+  version: 0.23.0
+  resolution: "scheduler@npm:0.23.0"
+  dependencies:
+    loose-envify: "npm:^1.1.0"
+  checksum: b777f7ca0115e6d93e126ac490dbd82642d14983b3079f58f35519d992fa46260be7d6e6cede433a92db70306310c6f5f06e144f0e40c484199e09c1f7be53dd
   languageName: node
   linkType: hard
 
@@ -2723,7 +2750,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:latest":
+"typescript@npm:^5.3.2, typescript@npm:latest":
   version: 5.3.2
   resolution: "typescript@npm:5.3.2"
   bin:
@@ -2733,7 +2760,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3Alatest#optional!builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A^5.3.2#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3Alatest#optional!builtin<compat/typescript>":
   version: 5.3.2
   resolution: "typescript@patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"
   bin:
@@ -2869,6 +2896,7 @@ __metadata:
     husky: "npm:^8.0.0"
     pinst: "npm:^3.0.0"
     prettier: "npm:latest"
+    react-dom: "npm:^18.2.0"
     typescript: "npm:latest"
   languageName: unknown
   linkType: soft

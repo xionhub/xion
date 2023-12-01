@@ -5,7 +5,8 @@
     "postinstall": "husky install",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable",
-    "check": "yarn workspaces list --json"
+    "check": "yarn workspaces list --json",
+    "build:all": "yarn workspaces foreach -A run build"
   },
   "devDependencies": {
     "@types/jest": "^29.5.10",
@@ -22,10 +23,11 @@
   },
   "workspaces": [
     "packages/*",
-    "./hook"
+    "hook"
   ],
   "dependencies": {
-    "esbuild": "^0.19.8"
+    "esbuild": "^0.19.8",
+    "react-dom": "^18.2.0"
   },
   "engines": {
     "yarn": "4.x"
