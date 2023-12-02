@@ -29,5 +29,10 @@
   ],
   "engines": {
     "yarn": "4.x"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "node commit-convention-check.js"
+    }
   }
 }
