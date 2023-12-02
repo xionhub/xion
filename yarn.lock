@@ -1461,6 +1461,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xionhub/react-hook@workspace:packages/react-hook"
   dependencies:
+    "@testing-library/react": "npm:^14.1.2"
     "@types/react": "npm:^18.2.39"
     esbuild: "npm:^0.19.8"
     esbuild-node-externals: "npm:^1.11.0"
