@@ -6,7 +6,8 @@
     "prepack": "pinst --disable",
     "postpack": "pinst --enable",
     "check": "yarn workspaces list --json",
-    "build:all": "yarn workspaces foreach -A run build"
+    "build:all": "yarn workspaces foreach -A run build",
+    "push:origin": "git push origin $(git symbolic-ref --short HEAD)"
   },
   "devDependencies": {
     "@types/jest": "^29.5.10",
@@ -14,8 +15,9 @@
     "@types/react": "^18.2.39",
     "@typescript-eslint/eslint-plugin": "^6.13.1",
     "@typescript-eslint/parser": "^6.13.1",
+    "esbuild": "^0.19.8",
     "eslint": "latest",
-    "eslint-plugin-react": "^7.33.2",
+    "eslint-config-next": "^14.0.3",
     "husky": "^8.0.0",
     "pinst": "^3.0.0",
     "prettier": "latest",
@@ -25,11 +27,12 @@
     "packages/*",
     "hook"
   ],
-  "dependencies": {
-    "esbuild": "^0.19.8",
-    "react-dom": "^18.2.0"
-  },
   "engines": {
     "yarn": "4.x"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "node commit-convention-check.js"
+    }
   }
 }
