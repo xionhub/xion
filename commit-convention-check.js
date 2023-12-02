@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-console.log('commit check start');
 const fs = require('fs');
 
 const commitMsgFile = process.env.HUSKY_GIT_PARAMS;
@@ -22,5 +21,5 @@ if (!isValid) {
 function validateCommitMessage(message) {
   // Implement your own validation logic here
   // Check for Gitmoji, message length, etc.
-  return true; // Return true if the message is valid, false otherwise
+  return false; // Return true if the message is valid, false otherwise
 }
