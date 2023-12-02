@@ -8,6 +8,8 @@ COMMIT_PATTERN="^:[a-zA-Z]+: [^\n]+$"
 echo "❤️‍🩹 Commit Message: $COMMIT_MESSAGE"
 
 if [[ ! $COMMIT_MESSAGE =~ $COMMIT_PATTERN ]]; then
-  echo "Invalid commit message format. Please use the format ':emoji: Title'."
+  echo "💕 you have to use gitmoji "
   exit 1
 fi
+
+echo "🔆 Thanks for keeping the convention 🔆"
