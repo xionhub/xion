@@ -10,14 +10,11 @@
     "push:origin": "git push origin $(git symbolic-ref --short HEAD)"
   },
   "devDependencies": {
-    "@commitlint/cli": "^18.4.3",
-    "@commitlint/config-conventional": "^18.4.3",
     "@types/jest": "^29.5.10",
     "@types/node": "^20.10.0",
     "@types/react": "^18.2.39",
     "@typescript-eslint/eslint-plugin": "^6.13.1",
     "@typescript-eslint/parser": "^6.13.1",
-    "commitlint-plugin-function-rules": "^3.0.0",
     "esbuild": "^0.19.8",
     "eslint": "latest",
     "eslint-config-next": "^14.0.3",
