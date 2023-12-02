@@ -1,5 +1,5 @@
 {
-  "name": "@xion/react-hook",
+  "name": "@xionhub/react-hook",
   "license": "MIT",
   "version": "0.0.3",
   "main": "dist/index.js",
@@ -9,8 +9,7 @@
     "clean": "rm -rf dist",
     "build:tsc": "yarn tsc --emitDeclarationOnly",
     "build:js": "node esbuild.js",
-    "prepack": "yarn build",
-    "publish": "yarn publish"
+    "prepack": "yarn build"
   },
   "exports": {
     ".": {
