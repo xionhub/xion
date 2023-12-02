@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+console.log('commit check start');
 const fs = require('fs');
 
 const commitMsgFile = process.env.HUSKY_GIT_PARAMS;
