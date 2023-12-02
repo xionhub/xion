@@ -2,3 +2,10 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 echo '💘 hello world'
+
+BRANCH_NAME=$(git symbolic-ref --short HEAD)
+
+if [[ ! $BRANCH_NAME =~ ^(feature|bugfix|hotfix|release|chore|docs|refactor|small)\/.* ]]; then
+  echo "Invalid branch name. Please use a valid branch naming convention."
+  exit 1
+fi
