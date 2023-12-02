@@ -9,6 +9,8 @@ echo "❕ you here Branch: $BRANCH_NAME ❕"
 
 if [[ ! $BRANCH_NAME =~ ^(feature|bugfix|hotfix|release|chore|docs|refactor|small)\/.* ]]; then
   echo "❌ Your branch name doesn't follow convention.  ❌"
+  echo "you can use for branch name ✅ feature|bugfix|hotfix|release|chore|docs|refactor|small"
+  echo "〽️ for example feature/hook ⭕️ its good"
   exit 1
 fi
 
