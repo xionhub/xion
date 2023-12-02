@@ -9,7 +9,7 @@
     "clean": "rm -rf dist",
     "build:tsc": "yarn tsc --emitDeclarationOnly",
     "build:js": "node esbuild.js",
-    "prepack": "yarn build"
+    "prepack": "yarn build && yarn version patch"
   },
   "exports": {
     ".": {
