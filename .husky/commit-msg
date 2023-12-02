@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+COMMIT_MESSAGE_FILE=$1
+COMMIT_MESSAGE=$(cat "$COMMIT_MESSAGE_FILE")
+
+COMMIT_PATTERN="^:[a-zA-Z]+: [^\n]+$"
+
+echo "❤️‍🩹 Commit Message: $COMMIT_MESSAGE"
+
+if [[ ! $COMMIT_MESSAGE =~ $COMMIT_PATTERN ]]; then
+  echo "Invalid commit message format. Please use the format ':emoji: Title'."
+  exit 1
+fi

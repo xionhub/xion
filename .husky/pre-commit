@@ -5,6 +5,10 @@ echo '💘 hello world'
 
 BRANCH_NAME=$(git symbolic-ref --short HEAD)
 
+
+echo "Branch Name: $BRANCH_NAME"
+echo "Commit Message: $COMMIT_MESSAGE"
+
 if [[ ! $BRANCH_NAME =~ ^(feature|bugfix|hotfix|release|chore|docs|refactor|small)\/.* ]]; then
   echo "Invalid branch name. Please use a valid branch naming convention."
   exit 1
