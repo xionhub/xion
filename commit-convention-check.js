@@ -19,7 +19,21 @@ if (!isValid) {
 }
 
 function validateCommitMessage(message) {
-  // Implement your own validation logic here
-  // Check for Gitmoji, message length, etc.
-  return false; // Return true if the message is valid, false otherwise
+  // Check if the commit message starts with a Gitmoji
+  const gitmojiRegex = /^:[^:\s]+:/;
+  if (!gitmojiRegex.test(message)) {
+    console.error('Commit message must start with a Gitmoji.');
+    return false;
+  }
+
+  // Check if the length of the commit message is at least 7 characters
+  if (message.length < 7) {
+    console.error('Commit message must be at least 7 characters long.');
+    return false;
+  }
+
+  // Additional custom validation logic can be added here
+
+  // If all checks pass, the commit message is considered valid
+  return true;
 }
