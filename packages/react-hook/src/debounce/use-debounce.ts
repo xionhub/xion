@@ -1,3 +1,4 @@
+'use client';
 import { useRef } from 'react';
 
 export const useDebounce = <ParamType extends unknown[]>(
