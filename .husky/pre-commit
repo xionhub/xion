@@ -11,6 +11,7 @@ if [[ ! $BRANCH_NAME =~ ^(feature|bugfix|hotfix|release|chore|docs|refactor|smal
   echo "❌ Your branch name doesn't follow convention.  ❌"
   echo "you can use for branch name ✅ feature|bugfix|hotfix|release|chore|docs|refactor|small"
   echo "〽️ for example feature/hook ⭕️ its good"
+  echo "💕 you can change branch name git branch -m youwantbranchname 💕"
   exit 1
 fi
 
