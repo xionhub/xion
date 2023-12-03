@@ -8,7 +8,7 @@
     "check": "yarn workspaces list --json",
     "build:all": "yarn workspaces foreach -A run build",
     "push:origin": "git push origin $(git symbolic-ref --short HEAD)",
-    "test": "jest  --env=jsdom",
+    "test": "jest --watch --env=jsdom",
     "test:hook": "jest --projects packages/react-hook --watch  --env=jsdom"
   },
   "devDependencies": {
