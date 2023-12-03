@@ -1,4 +1,5 @@
 import esbuild from 'esbuild';
+import { nodeExternalsPlugin } from 'esbuild-node-externals';
 // 공통으로 사용할 옵션들
 // https://esbuild.github.io/api/#build 에서 다양한 옵션들을 확인할 수 있다.
 const baseConfig = {
@@ -6,6 +7,10 @@ const baseConfig = {
   outdir: 'dist', // 컴파일된 파일이 저장될 경로
   bundle: true, // 번들링 여부
   sourcemap: true, // 소스맵 생성 여부
+  treeShaking: true,
+  minify: true,
+  format: 'cjs',
+  plugins: [nodeExternalsPlugin()],
 };
 Promise.all([
   // 한 번은 cjs

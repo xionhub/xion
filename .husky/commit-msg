@@ -1,15 +1,19 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
+
 COMMIT_MESSAGE_FILE=$1
 COMMIT_MESSAGE=$(cat "$COMMIT_MESSAGE_FILE")
 
-COMMIT_PATTERN="^:[a-zA-Z]+: [^\n]+$"
+# Adjust the commit pattern to allow for multi-line commit messages
+COMMIT_PATTERN="^:[a-zA-Z]+: .+"
 
 echo "❤️‍🩹 Commit Message: $COMMIT_MESSAGE"
 
 if [[ ! $COMMIT_MESSAGE =~ $COMMIT_PATTERN ]]; then
-  echo "💕 you have to use gitmoji "
+  echo "💕 Please use gitmoji in your commit message"
+  echo "💕 Commit message should follow the pattern: ^:[a-zA-Z]+: .+"
   exit 1
 fi
 
 echo "🔆 Thanks for keeping the convention 🔆"
+exit 0
