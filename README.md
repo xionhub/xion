@@ -12,14 +12,12 @@ for example
 
 ```
  npm i @xionhub/react-hook
-
 ```
 
 if you using yarn
 
 ```
 yarn add @xionhub/react-hook
-
 ```
 
 # Documentation
