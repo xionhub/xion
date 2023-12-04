@@ -15,3 +15,4 @@ if [[ ! $BRANCH_NAME =~ ^(feature|bugfix|hotfix|release|chore|docs|refactor|smal
   exit 1
 fi
 
+yarn test:all
