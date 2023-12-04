@@ -12,9 +12,11 @@ describe('test use-debounce hook', () => {
   it('it should be called only one time with last argument', () => {
     const callback = jest.fn();
     const { result } = renderHook(() => useDebounce(callback, 10));
-    act(() => result.current('param1'));
-    act(() => result.current('param2'));
-    act(() => result.current('param3'));
+    act(() => {
+      result.current('param1');
+      result.current('param2');
+      result.current('param3');
+    });
     jest.advanceTimersByTime(10);
     expect(callback).toHaveBeenCalledWith('param3');
     expect(callback).toHaveBeenCalledTimes(1);
