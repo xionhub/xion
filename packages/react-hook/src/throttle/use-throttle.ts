@@ -1,10 +1,10 @@
 'use client';
 import { useRef } from 'react';
 
-function useThrottle<ParamTypes extends unknown[]>(
+export const useThrottle = <ParamTypes extends unknown[]>(
   callback: (...params: ParamTypes) => void,
   time: number,
-) {
+) => {
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   return (...params: ParamTypes) => {
@@ -15,6 +15,4 @@ function useThrottle<ParamTypes extends unknown[]>(
       }, time);
     }
   };
-}
-
-export default useThrottle;
+};
