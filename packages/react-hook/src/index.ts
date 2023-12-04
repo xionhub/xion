@@ -1,7 +1,5 @@
+import { useDelay } from './delay/use-delay';
+import { useThrottle } from './throttle/use-throttle';
 import { useDebounce } from './debounce/use-debounce';
 
-const hi = () => {
-  return 'hello world';
-};
-
-export { useDebounce, hi };
+export { useDelay, useThrottle, useDebounce };
