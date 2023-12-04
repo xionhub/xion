@@ -1,6 +1,5 @@
 import { act, renderHook, waitFor } from '@testing-library/react';
 import { useDelay } from './use-delay';
-import React from 'react';
 
 describe('test useDelay hook', () => {
   it('tuple first argument initial state should false', async () => {

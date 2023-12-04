@@ -1,5 +1,5 @@
 import { act, renderHook } from '@testing-library/react';
-import useThrottle from './use-throttle';
+import { useThrottle } from './use-throttle';
 
 describe('useThrottle hook', () => {
   beforeEach(() => {
