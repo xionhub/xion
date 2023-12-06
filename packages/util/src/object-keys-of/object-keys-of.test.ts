@@ -10,12 +10,14 @@ describe('object-keys-of', () => {
   });
   it('배열이 전달된 경우 인덱스를 담습니다.', () => {
     const arrayObj = ['hi', 'he'];
+    //@ts-expect-error
     const arrayCase = objectKeysOf(arrayObj);
     expect(arrayCase[0]).toBe('0');
     expect(arrayCase[1]).toBe('1');
   });
   it('문자열 역시 인덱스가 담깁니다. ', () => {
     const stringObj = 'hi';
+    //@ts-expect-error
     const stringCase = objectKeysOf(stringObj);
     expect(stringCase[0]).toBe('0');
     expect(stringCase[1]).toBe('1');
