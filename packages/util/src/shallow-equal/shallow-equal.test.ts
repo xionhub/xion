@@ -58,4 +58,10 @@ describe('shallow-equal', () => {
 
     expect(result).toBe(false);
   });
+  it('returns Object.is return true', () => {
+    const objA = { a: 1, b: 2 };
+    const objB = objA;
+    const result = shallowEqual(objA, objB);
+    expect(result).toBe(true);
+  });
 });
