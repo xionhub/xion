@@ -1,0 +1,21 @@
+{
+  "name": "@xionhub/stub",
+  "packageManager": "yarn@4.0.2",
+  "type": "module",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "echo 💞start react hook build && yarn clean && yarn build:tsc && yarn build:js",
+    "clean": "rm -rf dist",
+    "build:tsc": "yarn tsc --emitDeclarationOnly",
+    "build:js": "node esbuild.js",
+    "prepack": "yarn build && yarn version patch"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
