@@ -4,6 +4,7 @@
 
 
 build
+!configs/build
 coverage
 dist
 lib
