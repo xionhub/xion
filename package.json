@@ -40,7 +40,8 @@
     "typescript": "latest"
   },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "configs/*"
   ],
   "engines": {
     "yarn": "4.x"
