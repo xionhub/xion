@@ -1,22 +1,14 @@
 {
   "name": "@xionhub/stub",
-  "packageManager": "yarn@4.0.2",
-  "type": "module",
   "version": "0.0.1",
   "main": "dist/index.js",
+  "type": "module",
   "scripts": {
     "build": "echo 💞start stub && yarn clean && yarn build:tsc && yarn build:js",
     "clean": "rm -rf dist",
     "build:tsc": "yarn tsc --emitDeclarationOnly",
     "build:js": "node esbuild.js",
     "prepack": "yarn build && yarn version patch"
-  },
-  "files": [
-    "dist",
-    "src"
-  ],
-  "publishConfig": {
-    "access": "public"
   },
   "exports": {
     ".": {
@@ -26,8 +18,16 @@
       "default": "./dist/index.js"
     }
   },
+  "files": [
+    "dist",
+    "src"
+  ],
   "devDependencies": {
     "@xionhub/esbuild": "workspace:^",
     "typescript": "^5.3.3"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "yarn@4.0.2"
 }
