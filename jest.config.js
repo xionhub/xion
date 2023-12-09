@@ -14,4 +14,10 @@ module.exports = {
       },
     ],
   },
+  collectCoverageFrom: [
+    '**/src/**/*.{ts,tsx}',
+    '!**/*stub*/**',
+    '!**/*is-server*.{ts,tsx}',
+    '!**/*is-client*.{ts,tsx}',
+  ],
 };
