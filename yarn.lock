@@ -1055,7 +1055,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/dom@npm:^9.0.0, @testing-library/dom@npm:^9.3.3":
+"@testing-library/dom@npm:^9.3.3":
   version: 9.3.3
   resolution: "@testing-library/dom@npm:9.3.3"
   dependencies:
@@ -1248,7 +1248,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^20.10.0":
+"@types/node@npm:^20.10.0":
   version: 20.10.2
   resolution: "@types/node@npm:20.10.2"
   dependencies:
@@ -1264,7 +1264,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18, @types/react-dom@npm:^18.0.0":
+"@types/react-dom@npm:^18":
   version: 18.2.17
   resolution: "@types/react-dom@npm:18.2.17"
   dependencies:
@@ -1273,7 +1273,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^18.2.39":
+"@types/react@npm:^18.2.39":
   version: 18.2.40
   resolution: "@types/react@npm:18.2.40"
   dependencies:
@@ -1353,7 +1353,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.4.2 || ^6.0.0, @typescript-eslint/parser@npm:^6.13.1":
+"@typescript-eslint/parser@npm:^6.13.1":
   version: 6.13.1
   resolution: "@typescript-eslint/parser@npm:6.13.1"
   dependencies:
@@ -1457,19 +1457,68 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@xionhub/esbuild@workspace:^, @xionhub/esbuild@workspace:configs/build":
+  version: 0.0.0-use.local
+  resolution: "@xionhub/esbuild@workspace:configs/build"
+  dependencies:
+    esbuild: "npm:^0.19.8"
+    esbuild-node-externals: "npm:^1.11.0"
+    typescript: "npm:^5.3.3"
+  peerDependencies:
+    esbuild: ^0.19.8
+    esbuild-node-externals: ^1.0.0
+  languageName: unknown
+  linkType: soft
+
 "@xionhub/react-hook@workspace:packages/react-hook":
   version: 0.0.0-use.local
   resolution: "@xionhub/react-hook@workspace:packages/react-hook"
   dependencies:
     "@testing-library/react": "npm:^14.1.2"
-    "@types/react": "npm:^18.2.39"
-    esbuild: "npm:^0.19.8"
-    esbuild-node-externals: "npm:^1.11.0"
-    react: "npm:^18.2.0"
-    typescript: "npm:^5.3.2"
+    "@types/react": "npm:18.2.39"
+    "@xionhub/esbuild": "workspace:^"
+    react: "npm:18.2.0"
+    typescript: "npm:^5.3.3"
   peerDependencies:
     react: ^18.0.0
     react-dom: ^18.0.0
+  languageName: unknown
+  linkType: soft
+
+"@xionhub/root@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@xionhub/root@workspace:."
+  dependencies:
+    "@testing-library/dom": "npm:^9.3.3"
+    "@testing-library/jest-dom": "npm:^6.1.5"
+    "@testing-library/react": "npm:^14.1.2"
+    "@testing-library/user-event": "npm:^14.5.1"
+    "@types/jest": "npm:^29.5.10"
+    "@types/node": "npm:^20.10.0"
+    "@types/react": "npm:^18.2.39"
+    "@types/react-dom": "npm:^18"
+    "@typescript-eslint/eslint-plugin": "npm:^6.13.1"
+    "@typescript-eslint/parser": "npm:^6.13.1"
+    esbuild: "npm:^0.19.8"
+    esbuild-node-externals: "npm:^1.11.0"
+    eslint: "npm:latest"
+    eslint-config-next: "npm:^14.0.3"
+    husky: "npm:^8.0.0"
+    jest: "npm:^29.7.0"
+    jest-environment-jsdom: "npm:^29.7.0"
+    jest-fetch-mock: "npm:^3.0.3"
+    pinst: "npm:^3.0.0"
+    prettier: "npm:latest"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    ts-jest: "npm:^29.1.1"
+    typescript: "npm:^5.3.3"
+  languageName: unknown
+  linkType: soft
+
+"@xionhub/stub@workspace:packages/stub":
+  version: 0.0.0-use.local
+  resolution: "@xionhub/stub@workspace:packages/stub"
   languageName: unknown
   linkType: soft
 
@@ -1479,7 +1528,6 @@ __metadata:
   dependencies:
     esbuild: "npm:^0.19.8"
     esbuild-node-externals: "npm:^1.11.0"
-    typescript: "npm:^5.3.2"
   languageName: unknown
   linkType: soft
 
@@ -6412,23 +6460,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.3.2, typescript@npm:latest":
-  version: 5.3.2
-  resolution: "typescript@npm:5.3.2"
+"typescript@npm:^5.3.3":
+  version: 5.3.3
+  resolution: "typescript@npm:5.3.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: d7dbe1fbe19039e36a65468ea64b5d338c976550394ba576b7af9c68ed40c0bc5d12ecce390e4b94b287a09a71bd3229f19c2d5680611f35b7c53a3898791159
+  checksum: e33cef99d82573624fc0f854a2980322714986bc35b9cb4d1ce736ed182aeab78e2cb32b385efa493b2a976ef52c53e20d6c6918312353a91850e2b76f1ea44f
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5.3.2#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3Alatest#optional!builtin<compat/typescript>":
-  version: 5.3.2
-  resolution: "typescript@patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"
+"typescript@patch:typescript@npm%3A^5.3.3#optional!builtin<compat/typescript>":
+  version: 5.3.3
+  resolution: "typescript@patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 73c8bad74e732d93211c9d77f28b03307e2f5fc6a0afc73f4b783261ab567686a16d6ae958bdaef383a00be1b0b8c8b6741dd6ca3d13af4963fa7e47456d49c7
+  checksum: 1d0a5f4ce496c42caa9a30e659c467c5686eae15d54b027ee7866744952547f1be1262f2d40de911618c242b510029d51d43ff605dba8fb740ec85ca2d3f9500
   languageName: node
   linkType: hard
 
@@ -6778,37 +6826,6 @@ __metadata:
   checksum: ccd7e723e61ad5965fffbb791366db689572b80cca80e0f96aad968dfff4156cd7cd1ad18607afe1046d8241e6fb2d6c08bf7fa7bfb5eaec818735d8feac8f05
   languageName: node
   linkType: hard
-
-"yarn-workspace@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "yarn-workspace@workspace:."
-  dependencies:
-    "@testing-library/dom": "npm:^9.3.3"
-    "@testing-library/jest-dom": "npm:^6.1.5"
-    "@testing-library/react": "npm:^14.1.2"
-    "@testing-library/user-event": "npm:^14.5.1"
-    "@types/jest": "npm:^29.5.10"
-    "@types/node": "npm:^20.10.0"
-    "@types/react": "npm:^18.2.39"
-    "@types/react-dom": "npm:^18"
-    "@typescript-eslint/eslint-plugin": "npm:^6.13.1"
-    "@typescript-eslint/parser": "npm:^6.13.1"
-    esbuild: "npm:^0.19.8"
-    esbuild-node-externals: "npm:^1.11.0"
-    eslint: "npm:latest"
-    eslint-config-next: "npm:^14.0.3"
-    husky: "npm:^8.0.0"
-    jest: "npm:^29.7.0"
-    jest-environment-jsdom: "npm:^29.7.0"
-    jest-fetch-mock: "npm:^3.0.3"
-    pinst: "npm:^3.0.0"
-    prettier: "npm:latest"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
-    ts-jest: "npm:^29.1.1"
-    typescript: "npm:latest"
-  languageName: unknown
-  linkType: soft
 
 "yocto-queue@npm:^0.1.0":
   version: 0.1.0
