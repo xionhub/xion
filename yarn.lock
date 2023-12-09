@@ -1473,6 +1473,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@xionhub/stub@workspace:packages/stub":
+  version: 0.0.0-use.local
+  resolution: "@xionhub/stub@workspace:packages/stub"
+  languageName: unknown
+  linkType: soft
+
 "@xionhub/util@workspace:packages/util":
   version: 0.0.0-use.local
   resolution: "@xionhub/util@workspace:packages/util"
@@ -1961,6 +1967,12 @@ __metadata:
   checksum: 124fff9d66d691a86d3b062eff4663fe437a9d9ee4b47b1b9e97f5a5d14f6d5399345db80f796827be7c95e70a8e765dd404b7c3ff3b3324f98e9b0c8826cc34
   languageName: node
   linkType: hard
+
+"build@workspace:configs/build":
+  version: 0.0.0-use.local
+  resolution: "build@workspace:configs/build"
+  languageName: unknown
+  linkType: soft
 
 "cacache@npm:^18.0.0":
   version: 18.0.1
