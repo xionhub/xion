@@ -5,7 +5,7 @@ COMMIT_MESSAGE_FILE=$1
 COMMIT_MESSAGE=$(cat "$COMMIT_MESSAGE_FILE")
 
 # Adjust the commit pattern to allow for multi-line commit messages
-COMMIT_PATTERN="^:[a-zA-Z]+: .+"
+COMMIT_PATTERN="^:.+: .+"
 
 echo "❤️‍🩹 Commit Message: $COMMIT_MESSAGE"
 
