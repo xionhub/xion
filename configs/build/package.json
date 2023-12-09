@@ -1,9 +1,14 @@
 {
   "name": "@xionhub/esbuild",
   "packageManager": "yarn@4.0.2",
+  "license": "MIT",
+  "version": "0.0.1",
+  "main": "build.js",
+  "type": "module",
   "devDependencies": {
     "esbuild": "^0.19.8",
-    "esbuild-node-externals": "^1.11.0"
+    "esbuild-node-externals": "^1.11.0",
+    "typescript": "^5.3.3"
   },
   "peerDependencies": {
     "esbuild": "^0.19.8",

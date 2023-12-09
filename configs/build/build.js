@@ -1,9 +1,7 @@
-import esbuild, { BuildOptions, SameShape } from 'esbuild';
+import esbuild from 'esbuild';
 import { nodeExternalsPlugin } from 'esbuild-node-externals';
 
-export const xionEsBuildConfig = async <T extends BuildOptions>(
-  options: SameShape<BuildOptions, T>,
-) => {
+export const xionEsBuildConfig = async (options) => {
   const baseConfig = {
     entryPoints: ['src/index.ts'],
     outdir: 'dist',
