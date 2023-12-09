@@ -2,9 +2,9 @@ import esbuild from 'esbuild';
 import { nodeExternalsPlugin } from 'esbuild-node-externals';
 const baseConfig = {
   entryPoints: ['src/index.ts'],
-  outdir: 'dist', 
+  outdir: 'dist',
   bundle: true,
-  sourcemap: true, 
+  sourcemap: true,
   treeShaking: true,
   minify: true,
   format: 'cjs',
