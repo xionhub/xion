@@ -1,6 +1,6 @@
-import { historyStub } from '@xionhub/stub/src';
+import { historyStub } from '@xionhub/stub';
 import { isClient } from '../is-client/is-client';
-
+import { HistorySalt } from '../types/history-salt';
 type SaltedHistory = History & HistorySalt;
 
 const saltedHistoryStub = Object.assign(historyStub, {
