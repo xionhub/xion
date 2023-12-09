@@ -7,9 +7,6 @@ export const locationStub: Location = {
     item(index: number) {
       return null;
     },
-    [Symbol.iterator]: function (): IterableIterator<string> {
-      throw new Error('Function not implemented.');
-    },
   },
   hash: '',
   host: '',
