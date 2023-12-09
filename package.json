@@ -1,5 +1,5 @@
 {
-  "name": "yarn-workspace",
+  "name": "@xionhub/root",
   "packageManager": "yarn@4.0.2",
   "scripts": {
     "postinstall": "husky install",
