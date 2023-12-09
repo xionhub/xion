@@ -1497,7 +1497,6 @@ __metadata:
   dependencies:
     esbuild: "npm:^0.19.8"
     esbuild-node-externals: "npm:^1.11.0"
-    typescript: "npm:^5.3.2"
   languageName: unknown
   linkType: soft
 
