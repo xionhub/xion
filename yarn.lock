@@ -1457,6 +1457,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@xionhub/esbuild@workspace:configs/build":
+  version: 0.0.0-use.local
+  resolution: "@xionhub/esbuild@workspace:configs/build"
+  dependencies:
+    esbuild: "npm:^0.19.8"
+    esbuild-node-externals: "npm:^1.11.0"
+  peerDependencies:
+    esbuild: ^0.19.8
+    esbuild-node-externals: ^1.0.0
+  languageName: unknown
+  linkType: soft
+
 "@xionhub/react-hook@workspace:packages/react-hook":
   version: 0.0.0-use.local
   resolution: "@xionhub/react-hook@workspace:packages/react-hook"
@@ -1967,12 +1979,6 @@ __metadata:
   checksum: 124fff9d66d691a86d3b062eff4663fe437a9d9ee4b47b1b9e97f5a5d14f6d5399345db80f796827be7c95e70a8e765dd404b7c3ff3b3324f98e9b0c8826cc34
   languageName: node
   linkType: hard
-
-"build@workspace:configs/build":
-  version: 0.0.0-use.local
-  resolution: "build@workspace:configs/build"
-  languageName: unknown
-  linkType: soft
 
 "cacache@npm:^18.0.0":
   version: 18.0.1
