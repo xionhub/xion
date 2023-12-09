@@ -12,7 +12,9 @@
     "test:hook": "jest --projects packages/react-hook --watch  --env=jsdom",
     "test:all": "jest",
     "coverage": "jest --coverage",
-    "react": "yarn workspace @xionhub/react-hook"
+    "react": "yarn workspace @xionhub/react-hook",
+    "util": "yarn workspace @xionhub/util",
+    "stub": "yarn workspace @xionhub/stub"
   },
   "devDependencies": {
     "@testing-library/dom": "^9.3.3",
