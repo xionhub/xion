@@ -1,6 +1,5 @@
 import * as clientModule from '../is-client/is-client';
-import { locationStub } from '@xionhub/stub';
-import { safeLocation } from './safe-location';
+import { locationStub, safeLocation } from './safe-location';
 describe('safehistory', () => {
   it('if client -> isStub false', () => {
     jest.spyOn(clientModule, 'isClient').mockImplementation(() => true);

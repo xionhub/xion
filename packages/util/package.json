@@ -29,8 +29,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "@xionhub/stub": "workspace:^"
   }
 }
