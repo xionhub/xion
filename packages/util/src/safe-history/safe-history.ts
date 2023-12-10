@@ -1,7 +1,7 @@
 import { historyStub } from '@xionhub/stub';
 import { isClient } from '../is-client/is-client';
 import { HistorySalt } from '../types/history-salt';
-type SaltedHistory = History & HistorySalt;
+export type SaltedHistory = History & HistorySalt;
 
 const saltedHistoryStub = Object.assign(historyStub, {
   isReady: false,
