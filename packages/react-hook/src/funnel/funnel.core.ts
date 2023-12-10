@@ -1,6 +1,3 @@
-import { safeLocation } from './../../../util/src/safe-location/safe-location';
-import { safeHistory } from './../../../util/src/safe-history/safe-history';
-
 export type FunnelCoreConstructor = {
   safeLocation: () => Location;
   safeHistory: () => History;
@@ -22,5 +19,3 @@ export class FunnelCore {
     return `${host}${path}?${queryKey}=${queryValue}`;
   }
 }
-
-export const funnelCore = new FunnelCore({ safeHistory, safeLocation });
