@@ -24,6 +24,7 @@
     "src"
   ],
   "devDependencies": {
+    "@xionhub/esbuild": "workspace:^",
     "@xionhub/stub": "workspace:^",
     "esbuild": "^0.19.8",
     "esbuild-node-externals": "^1.11.0",
