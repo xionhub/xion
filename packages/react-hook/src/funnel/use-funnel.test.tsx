@@ -1,5 +1,6 @@
-import { act, renderHook } from '@testing-library/react';
+import { act, render, renderHook } from '@testing-library/react';
 import { useFunnel } from './use-funnel';
+import React from 'react';
 describe('use-funnel', () => {
   it('setStep is working', () => {
     const { result } = renderHook(() => useFunnel(['hi', 'hello'] as const));
@@ -23,5 +24,35 @@ describe('use-funnel', () => {
       useFunnel(['hi', 'hello'] as const, { targetKey: 'yes' }),
     );
     expect(window.location.search).toBe('?yes=hi');
+  });
+
+  it('returns FunnelComponent and nextStep function', () => {
+    const steps = ['first', 'second', 'third'] as const;
+
+    const { result } = renderHook(() => useFunnel(steps));
+    const [FunnelComponent, nextStep] = result.current;
+
+    expect(FunnelComponent).toBeDefined();
+    expect(nextStep).toBeDefined();
+  });
+
+  it('renders FunnelComponent with the correct step and steps prop', () => {
+    const steps = ['first', 'second', 'third'] as const;
+    const { result } = renderHook(() => useFunnel(steps));
+    const [FunnelComponent] = result.current;
+
+    render(
+      <FunnelComponent>
+        <FunnelComponent.Step name="first">
+          <div className="">first</div>
+        </FunnelComponent.Step>
+        <FunnelComponent.Step name="second">
+          <div className="">second</div>
+        </FunnelComponent.Step>
+        <FunnelComponent.Step name="third">
+          <div className="">third</div>
+        </FunnelComponent.Step>
+      </FunnelComponent>,
+    );
   });
 });

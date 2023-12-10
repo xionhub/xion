@@ -33,7 +33,10 @@ export const useFunnel = <Steps extends NonEmptyArray<string>>(
   const nextStep = (nextQuery: Steps[number]) => {
     return () => {
       setCurrentStep(() => {
-        funnelCore.pushNextStepState(targetKey, nextQuery);
+        const getSafeParam = safeSearchParams(targetKey);
+        if (getSafeParam !== nextQuery) {
+          funnelCore.pushNextStepState(targetKey, nextQuery);
+        }
         return nextQuery;
       });
     };
@@ -48,7 +51,7 @@ export const useFunnel = <Steps extends NonEmptyArray<string>>(
     return () => {
       window.removeEventListener('popstate', handlePopState);
     };
-  }, [setCurrentStep]);
+  }, []);
 
   React.useEffect(() => {
     funnelCore.replaceNextStepState(targetKey, initialStep);
