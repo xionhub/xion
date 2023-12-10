@@ -17,7 +17,13 @@ module.exports = {
   collectCoverageFrom: [
     '**/src/**/*.{ts,tsx}',
     '!**/*stub*/**',
+    '!**/*dist*/**',
+    '!**/*.vscode*/**',
+    '!**/*.husky*/**',
+    '!**/*.coverage*/**',
+    '!**/*.yarn*/**',
     '!**/*is-server*.{ts,tsx}',
     '!**/*is-client*.{ts,tsx}',
   ],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 };

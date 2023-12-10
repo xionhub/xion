@@ -12,18 +12,18 @@ describe('useThrottle hook', () => {
 
   it('should throttle the callback function', () => {
     const callback = jest.fn();
-    const { result } = renderHook(() => useThrottle(callback, 100));
+    const { result } = renderHook(() => useThrottle(callback, 2));
 
     act(() => {
       result.current('param1');
       result.current('param2');
       result.current('param3');
     });
-    jest.advanceTimersByTime(50);
+    jest.advanceTimersByTime(1);
 
     expect(callback).not.toHaveBeenCalled();
 
-    jest.advanceTimersByTime(50);
+    jest.advanceTimersByTime(1);
 
     expect(callback).toHaveBeenCalledWith('param1');
     expect(callback).toHaveBeenCalledTimes(1);
