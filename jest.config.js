@@ -20,4 +20,5 @@ module.exports = {
     '!**/*is-server*.{ts,tsx}',
     '!**/*is-client*.{ts,tsx}',
   ],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 };

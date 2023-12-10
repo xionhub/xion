@@ -9,6 +9,7 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": false,
-    "incremental": true
+    "incremental": true,
+    "types": ["node", "jest", "@testing-library/jest-dom"]
   }
 }
