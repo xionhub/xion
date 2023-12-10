@@ -17,7 +17,7 @@ export type RouteFunnelProps<Steps extends NonEmptyArray<string>> = Omit<
   'steps' | 'step'
 >;
 
-export type Option<Steps extends NonEmptyArray<string>> = {
+export type FunnelOptionObject<Steps extends NonEmptyArray<string>> = {
   initialStep: Steps[number];
   targetKey: string;
 };
