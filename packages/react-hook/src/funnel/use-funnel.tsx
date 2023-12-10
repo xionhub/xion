@@ -24,19 +24,15 @@ export const useFunnel = <Steps extends NonEmptyArray<string>>(
     targetKey: 'step',
   });
   const funnelCore = new FunnelCore({ safeHistory, safeLocation });
-  const history = safeHistory();
   const [steps, _] = React.useState<Steps>(array);
   const [currentStep, setCurrentStep] = React.useState<Steps[number]>(
     () => initialStep,
   );
+
   const nextStep = (nextQuery: Steps[number]) => {
     return () => {
       setCurrentStep(() => {
-        history.pushState(
-          '',
-          '',
-          funnelCore.createNextStep(targetKey, nextQuery),
-        );
+        funnelCore.pushNextStepState(targetKey, nextQuery);
         return nextQuery;
       });
     };
@@ -51,8 +47,11 @@ export const useFunnel = <Steps extends NonEmptyArray<string>>(
     return () => {
       window.removeEventListener('popstate', handlePopState);
     };
-  }, []);
+  }, [setCurrentStep]);
 
+  React.useEffect(() => {
+    funnelCore.replaceNextStepState(targetKey, initialStep);
+  }, []);
   const FunnelComponent = React.useMemo(() => {
     // eslint-disable-next-line react/display-name
     return Object.assign(
