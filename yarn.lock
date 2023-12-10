@@ -1529,6 +1529,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xionhub/util@workspace:packages/util"
   dependencies:
+    "@xionhub/esbuild": "workspace:^"
     "@xionhub/stub": "workspace:^"
     esbuild: "npm:^0.19.8"
     esbuild-node-externals: "npm:^1.11.0"
