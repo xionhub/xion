@@ -1482,7 +1482,7 @@ __metadata:
     react: "npm:18.2.0"
     typescript: "npm:^5.3.3"
   peerDependencies:
-    "@xionhub/util": "workspace:^0.0.4"
+    "@xionhub/util": ^0.0.4
     react: ^18.0.0
     react-dom: ^18.0.0
   languageName: unknown
