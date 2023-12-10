@@ -1531,8 +1531,6 @@ __metadata:
   dependencies:
     "@xionhub/esbuild": "workspace:^"
     "@xionhub/stub": "workspace:^"
-    esbuild: "npm:^0.19.8"
-    esbuild-node-externals: "npm:^1.11.0"
     typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
