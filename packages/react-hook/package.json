@@ -28,6 +28,7 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.1.5",
     "@testing-library/react": "^14.1.2",
     "@types/react": "18.2.39",
     "@xionhub/esbuild": "workspace:^",
