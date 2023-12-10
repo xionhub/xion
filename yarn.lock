@@ -1516,9 +1516,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xionhub/stub@workspace:packages/stub":
+"@xionhub/stub@workspace:^, @xionhub/stub@workspace:packages/stub":
   version: 0.0.0-use.local
   resolution: "@xionhub/stub@workspace:packages/stub"
+  dependencies:
+    "@xionhub/esbuild": "workspace:^"
+    typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
 
@@ -1526,8 +1529,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xionhub/util@workspace:packages/util"
   dependencies:
+    "@xionhub/stub": "workspace:^"
     esbuild: "npm:^0.19.8"
     esbuild-node-externals: "npm:^1.11.0"
+    typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
 
