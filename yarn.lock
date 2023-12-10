@@ -1474,12 +1474,15 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xionhub/react-hook@workspace:packages/react-hook"
   dependencies:
+    "@testing-library/jest-dom": "npm:^6.1.5"
     "@testing-library/react": "npm:^14.1.2"
     "@types/react": "npm:18.2.39"
     "@xionhub/esbuild": "workspace:^"
+    "@xionhub/util": "workspace:^"
     react: "npm:18.2.0"
     typescript: "npm:^5.3.3"
   peerDependencies:
+    "@xionhub/util": ^0.0.4
     react: ^18.0.0
     react-dom: ^18.0.0
   languageName: unknown
@@ -1516,7 +1519,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xionhub/stub@workspace:^, @xionhub/stub@workspace:packages/stub":
+"@xionhub/stub@workspace:packages/stub":
   version: 0.0.0-use.local
   resolution: "@xionhub/stub@workspace:packages/stub"
   dependencies:
@@ -1525,13 +1528,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xionhub/util@workspace:packages/util":
+"@xionhub/util@workspace:^, @xionhub/util@workspace:packages/util":
   version: 0.0.0-use.local
   resolution: "@xionhub/util@workspace:packages/util"
   dependencies:
-    "@xionhub/stub": "workspace:^"
-    esbuild: "npm:^0.19.8"
-    esbuild-node-externals: "npm:^1.11.0"
+    "@xionhub/esbuild": "workspace:^"
     typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft

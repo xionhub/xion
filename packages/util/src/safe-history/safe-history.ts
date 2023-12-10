@@ -1,8 +1,18 @@
-import { historyStub } from '@xionhub/stub';
 import { isClient } from '../is-client/is-client';
 import { HistorySalt } from '../types/history-salt';
-type SaltedHistory = History & HistorySalt;
-
+export type SaltedHistory = History & HistorySalt;
+const historyStub: SaltedHistory = {
+  length: 0,
+  scrollRestoration: 'auto',
+  state: undefined,
+  back: () => {},
+  forward: () => {},
+  go: () => {},
+  pushState: () => {},
+  replaceState: () => {},
+  isReady: false,
+  isStub: true,
+};
 const saltedHistoryStub = Object.assign(historyStub, {
   isReady: false,
   isStub: true,

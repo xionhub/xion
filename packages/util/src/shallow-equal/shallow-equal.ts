@@ -1,4 +1,4 @@
-function shallowEqual(objA: any, objB: any): boolean {
+export const shallowEqual = (objA: any, objB: any): boolean => {
   if (Object.is(objA, objB)) {
     return true;
   }
@@ -32,6 +32,4 @@ function shallowEqual(objA: any, objB: any): boolean {
   }
 
   return true;
-}
-
-export default shallowEqual;
+};
