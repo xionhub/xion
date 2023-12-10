@@ -14,8 +14,22 @@ export class FunnelCore {
 
   createNextStep(queryKey: string, queryValue: string) {
     const location = this.safeLocation();
-    const host = location.hostname;
     const path = location.pathname;
-    return `${host}${path}?${queryKey}=${queryValue}`;
+    return `${path}?${queryKey}=${queryValue}`;
+  }
+
+  pushNextStepState(queryKey: string, queryValue: string) {
+    return this.safeHistory().pushState(
+      '',
+      '',
+      this.createNextStep(queryKey, queryValue),
+    );
+  }
+  replaceNextStepState(queryKey: string, queryValue: string) {
+    return this.safeHistory().replaceState(
+      '',
+      '',
+      this.createNextStep(queryKey, queryValue),
+    );
   }
 }
