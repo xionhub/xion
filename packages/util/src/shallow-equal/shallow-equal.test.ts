@@ -1,4 +1,4 @@
-import shallowEqual from './shallow-equal';
+import { shallowEqual } from './shallow-equal';
 
 describe('shallow-equal', () => {
   afterEach(() => {
