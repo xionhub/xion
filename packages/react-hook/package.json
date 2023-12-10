@@ -24,7 +24,6 @@
     "src"
   ],
   "peerDependencies": {
-    "@xionhub/util": "^0.0.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
@@ -33,11 +32,13 @@
     "@testing-library/react": "^14.1.2",
     "@types/react": "18.2.39",
     "@xionhub/esbuild": "workspace:^",
-    "@xionhub/util": "workspace:^",
     "react": "18.2.0",
     "typescript": "^5.3.3"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@xionhub/util": "workspace:^"
   }
 }
