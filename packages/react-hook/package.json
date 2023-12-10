@@ -1,7 +1,7 @@
 {
   "name": "@xionhub/react-hook",
   "license": "MIT",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
