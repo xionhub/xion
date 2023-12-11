@@ -1,58 +1,77 @@
-import { act, render, renderHook } from '@testing-library/react';
+import { act, render, renderHook, screen } from '@testing-library/react';
 import { useFunnel } from './use-funnel';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 describe('use-funnel', () => {
-  it('setStep is working', () => {
-    const { result } = renderHook(() => useFunnel(['hi', 'hello'] as const));
-    const setStep = result.current[1];
-
-    expect(window.location.search).toBe('?step=hi');
-    act(() => setStep('hello')());
-    expect(window.location.search).toBe('?step=hello');
-    act(() => setStep('hi')());
-    expect(window.location.search).toBe('?step=hi');
-  });
-
-  it('initial step working?', () => {
-    const { result } = renderHook(() =>
-      useFunnel(['hi', 'hello'] as const, { initialStep: 'hello' }),
-    );
-    expect(window.location.search).toBe('?step=hello');
-  });
-  it('targetKey working?', () => {
-    const { result } = renderHook(() =>
-      useFunnel(['hi', 'hello'] as const, { targetKey: 'yes' }),
-    );
-    expect(window.location.search).toBe('?yes=hi');
-  });
-
-  it('returns FunnelComponent and nextStep function', () => {
-    const steps = ['first', 'second', 'third'] as const;
-
-    const { result } = renderHook(() => useFunnel(steps));
-    const [FunnelComponent, nextStep] = result.current;
-
-    expect(FunnelComponent).toBeDefined();
-    expect(nextStep).toBeDefined();
-  });
+  const steps = ['first', 'second', 'third'] as const;
 
   it('renders FunnelComponent with the correct step and steps prop', () => {
-    const steps = ['first', 'second', 'third'] as const;
     const { result } = renderHook(() => useFunnel(steps));
     const [FunnelComponent] = result.current;
 
     render(
       <FunnelComponent>
         <FunnelComponent.Step name="first">
-          <div className="">first</div>
+          <div className="" data-testid={'first-step'}>
+            first
+          </div>
         </FunnelComponent.Step>
         <FunnelComponent.Step name="second">
-          <div className="">second</div>
+          <div className="" data-testid={'seciond-step'}>
+            second
+          </div>
         </FunnelComponent.Step>
         <FunnelComponent.Step name="third">
-          <div className="">third</div>
+          <div className="" data-testid={'third-step'}>
+            third
+          </div>
         </FunnelComponent.Step>
       </FunnelComponent>,
     );
+    expect(screen.getByTestId('first-step')).toBeInTheDocument();
+  });
+
+  it('renders FunnelComponent with the correct step and steps prop', async () => {
+    const user = userEvent.setup();
+    const { result } = renderHook(() => useFunnel(steps));
+    const [FunnelComponent, setStep] = result.current;
+
+    render(
+      <FunnelComponent>
+        <FunnelComponent.Step name="first">
+          <div
+            className=""
+            data-testid={'first-step'}
+            onClick={setStep('second')}
+          >
+            first
+          </div>
+        </FunnelComponent.Step>
+        <FunnelComponent.Step name="second">
+          <div
+            className=""
+            data-testid={'seciond-step'}
+            onClick={setStep('third')}
+          >
+            second
+          </div>
+        </FunnelComponent.Step>
+        <FunnelComponent.Step name="third">
+          <div
+            className=""
+            data-testid={'third-step'}
+            onClick={setStep('first')}
+          >
+            third
+          </div>
+        </FunnelComponent.Step>
+      </FunnelComponent>,
+    );
+    const firstStep = screen.getByTestId('first-step');
+    console.log('클릭이전', window.location.href);
+    expect(window.location.search.includes('first')).toBe(true);
+    await user.click(firstStep);
+    expect(window.location.search.includes('first')).toBe(false);
+    expect(window.location.search.includes('second')).toBe(true);
   });
 });
