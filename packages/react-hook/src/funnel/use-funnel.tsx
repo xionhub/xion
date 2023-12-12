@@ -13,7 +13,6 @@ import {
   safeLocation,
   safeSearchParams,
 } from '@xionhub/util';
-import { FunnelCore } from './funnel.core';
 import { Funnel, Step } from './funnel';
 
 export const useFunnel = <Steps extends NonEmptyArray<string>>(
@@ -24,24 +23,29 @@ export const useFunnel = <Steps extends NonEmptyArray<string>>(
     initialStep: array[0],
     targetKey: 'step',
   });
-  const funnelCore = new FunnelCore({ safeHistory, safeLocation });
   const [steps, _] = React.useState<Steps>(array);
   const [currentStep, setCurrentStep] = React.useState<Steps[number]>(
     () => initialStep,
   );
+  const location = safeLocation();
+  const history = safeHistory();
+  const createNextStep = (queryKey: string, queryValue: string) => {
+    const path = location.pathname;
+    return `${path}?${queryKey}=${queryValue}`;
+  };
 
   const nextStep = (nextQuery: Steps[number]) => {
     return () => {
       setCurrentStep(() => {
         const getSafeParam = safeSearchParams(targetKey);
+        const newPath = createNextStep(targetKey, nextQuery);
         if (getSafeParam !== nextQuery) {
-          funnelCore.pushNextStepState(targetKey, nextQuery);
+          history.pushState('', '', newPath);
         }
         return nextQuery;
       });
     };
   };
-
   React.useEffect(() => {
     const handlePopState = () => {
       const nowStep = safeSearchParams(targetKey) ?? '';
@@ -54,7 +58,8 @@ export const useFunnel = <Steps extends NonEmptyArray<string>>(
   }, []);
 
   React.useEffect(() => {
-    funnelCore.replaceNextStepState(targetKey, initialStep);
+    const newPath = createNextStep(targetKey, initialStep);
+    history.replaceState('', '', newPath);
   }, []);
   const FunnelComponent = React.useMemo(() => {
     // eslint-disable-next-line react/display-name
