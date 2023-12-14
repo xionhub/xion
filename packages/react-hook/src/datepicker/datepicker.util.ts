@@ -38,7 +38,8 @@ export const getPrevMonthDate = (date: Date, length: number) => {
   return prevDayList;
 };
 
-export const getCurrentMonthDate = (date: Date, length: number) => {
+export const getCurrentMonthDate = (date: Date) => {
+  const length = getDaysInMonth(date)
   const startOfMonthDate = startOfMonth(date);
   return Array.from({ length }).map((_, i) => {
     return addDays(startOfMonthDate, i);

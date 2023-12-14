@@ -1,4 +1,3 @@
-import { getDaysInMonth, startOfMonth } from 'date-fns';
 import React from 'react';
 import {
   DayEnum,
@@ -18,11 +17,12 @@ export const useDatePicker = (
   injectDate: Date,
   option: UseDatePickerProps = { startDay: 'sunday' },
 ) => {
+  const { startDay } = option;
   const [date, dispatch] = React.useState(injectDate);
 
-  const curDayList = getCurrentMonthDate(date, getDaysInMonth(date));
+  const curDayList = getCurrentMonthDate(date);
 
-  const prevDayCount = getPrevDayCount(date, option.startDay);
+  const prevDayCount = getPrevDayCount(date, startDay);
   const prevDayList = getPrevMonthDate(date, prevDayCount);
 
   const nextDayCount = getNextDayCount(curDayList.length, prevDayList.length);
