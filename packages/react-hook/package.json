@@ -1,7 +1,7 @@
 {
   "name": "@xionhub/react-hook",
   "license": "MIT",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
@@ -25,9 +25,9 @@
   ],
   "peerDependencies": {
     "@xionhub/util": "^0.0.4",
+    "date-fns": "^2.0.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "date-fns": "^2.0.0"
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.5",
