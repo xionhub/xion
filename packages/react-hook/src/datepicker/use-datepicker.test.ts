@@ -12,7 +12,7 @@ describe('date picker', () => {
   it('항상 weekCalendarList는 6 * 7 형태의 2차원배열이며 총요소가 42개입니다.', () => {
     const date = new Date(..._2023_11_14);
     const { result } = renderHook(() => useDatePicker(date));
-    const calendarList = result.current.weekCalendarList;
+    const calendarList = result.current.calendar;
     const IS_ALL_LIST_LENGTH_7 = calendarList.every((row) => row.length === 7);
     expect(calendarList).toHaveLength(6);
     expect(IS_ALL_LIST_LENGTH_7).toBe(true);
@@ -21,7 +21,7 @@ describe('date picker', () => {
   it('전월에 대한 정보를 알아야합니다.', () => {
     const date = new Date(..._2023_11_14);
     const { result } = renderHook(() => useDatePicker(date));
-    const START_DATE = result.current.weekCalendarList[0][0];
+    const START_DATE = result.current.calendar[0][0];
     expect(START_DATE.getDate()).toBe(DAY_OF_2023_11_25);
     expect(START_DATE.getMonth()).toBe(MONTH_OF_2023_11_25);
   });
@@ -29,8 +29,7 @@ describe('date picker', () => {
   it('다음달에 대한 정보를 알아야합니다.', () => {
     const date = new Date(..._2023_11_14);
     const { result } = renderHook(() => useDatePicker(date));
-    const END_DATE = result.current.weekCalendarList[5][6];
-    console.log(END_DATE);
+    const END_DATE = result.current.calendar[5][6];
     expect(END_DATE.getDate()).toBe(DAY_OF_2024_01_05);
     expect(END_DATE.getMonth()).toBe(MONTH_OF_2024_01_05);
   });

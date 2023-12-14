@@ -58,17 +58,14 @@ export const useDatePicker = (
     return addDays(firstDayOfNextMonth, i);
   });
   const currentCalendarList = prevDayList.concat(currentDayList, nextDayList);
-  const weekCalendarList = currentCalendarList.reduce(
-    (acc: Date[][], cur, idx) => {
-      const chunkIndex = Math.floor(idx / DAY_OF_WEEK);
-      if (!acc[chunkIndex]) {
-        acc[chunkIndex] = [];
-      }
-      acc[chunkIndex].push(cur);
-      return acc;
-    },
-    [],
-  );
+  const calendar = currentCalendarList.reduce((acc: Date[][], cur, idx) => {
+    const chunkIndex = Math.floor(idx / DAY_OF_WEEK);
+    if (!acc[chunkIndex]) {
+      acc[chunkIndex] = [];
+    }
+    acc[chunkIndex].push(cur);
+    return acc;
+  }, []);
 
-  return { weekCalendarList, date, dispatch };
+  return { calendar, date, dispatch };
 };
