@@ -44,6 +44,7 @@ export const useFunnel = <Steps extends NonEmptyArray<string>>(
     if (getSafeParam !== nextQuery) {
       history.pushState('', '', newPath);
     }
+    
   };
 
   React.useEffect(() => {
