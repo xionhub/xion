@@ -1,24 +1,15 @@
-import {
-  getDaysInMonth,
-  subMonths,
-  addDays,
-  startOfMonth,
-  addMonths,
-} from 'date-fns';
+import { getDaysInMonth, startOfMonth } from 'date-fns';
 import React from 'react';
+import {
+  DayEnum,
+  getCurrentMonthDate,
+  getPrevMonthDate,
+  getNextMonthDate,
+  getPrevDayCount,
+  getNextDayCount,
+  flatTo2DArray,
+} from './datepicker.util';
 
-const CALENDER_LENGTH = 42;
-const DAY_OF_WEEK = 7;
-
-enum DayEnum {
-  sunday = 0,
-  monday = 1,
-  tuesday = 2,
-  wednesday = 3,
-  thursday = 4,
-  friday = 5,
-  saturday = 6,
-}
 interface UseDatePickerProps {
   startDay: keyof typeof DayEnum;
 }
@@ -28,44 +19,17 @@ export const useDatePicker = (
   option: UseDatePickerProps = { startDay: 'sunday' },
 ) => {
   const [date, dispatch] = React.useState(injectDate);
-  const startOfMonthDate = startOfMonth(date);
-  const totalMonthDays = getDaysInMonth(date);
-  const lastDayOfPrevMonth = getDaysInMonth(subMonths(date, 1));
 
-  const firstDayOfWeek = startOfMonthDate.getDay();
+  const curDayList = getCurrentMonthDate(date, getDaysInMonth(date));
 
-  // Adjust prevDayCount based on the chosen start day
-  const prevDayCount =
-    (firstDayOfWeek - DayEnum[option.startDay!] + DAY_OF_WEEK) % DAY_OF_WEEK;
+  const prevDayCount = getPrevDayCount(date, option.startDay);
+  const prevDayList = getPrevMonthDate(date, prevDayCount);
 
-  const prevDayList = Array.from({ length: prevDayCount }).map((_, i) => {
-    return addDays(
-      new Date(date.getFullYear(), date.getMonth() - 1, 1),
-      lastDayOfPrevMonth - prevDayCount + i,
-    );
-  });
+  const nextDayCount = getNextDayCount(curDayList.length, prevDayList.length);
+  const nextDayList = getNextMonthDate(date, nextDayCount);
 
-  const currentDayList = Array.from({ length: totalMonthDays }).map((_, i) =>
-    addDays(startOfMonthDate, i),
-  );
-
-  const firstDayOfNextMonth = startOfMonth(addMonths(date, 1));
-
-  const nextDayCount =
-    CALENDER_LENGTH - currentDayList.length - prevDayList.length;
-
-  const nextDayList = Array.from({ length: nextDayCount }).map((_, i) => {
-    return addDays(firstDayOfNextMonth, i);
-  });
-  const currentCalendarList = prevDayList.concat(currentDayList, nextDayList);
-  const calendar = currentCalendarList.reduce((acc: Date[][], cur, idx) => {
-    const chunkIndex = Math.floor(idx / DAY_OF_WEEK);
-    if (!acc[chunkIndex]) {
-      acc[chunkIndex] = [];
-    }
-    acc[chunkIndex].push(cur);
-    return acc;
-  }, []);
+  const flatCalendarList = prevDayList.concat(curDayList, nextDayList);
+  const calendar = flatTo2DArray(flatCalendarList);
 
   return { calendar, date, dispatch };
 };
