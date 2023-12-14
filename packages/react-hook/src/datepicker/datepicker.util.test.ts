@@ -13,6 +13,12 @@ describe('datepicker util test', () => {
     expect(getPrevDayCount(date, 'friday')).toBe(0);
   });
 
+  it('', () => {
+    //@ts-expect-error
+    console.log(getPrevDayCount(date, ''));
+    //@ts-expect-error
+    console.log(getPrevDayCount(date, 12));
+  });
   it('getPrevMonthDate는 두번째 매개변수만큼의 길이를 가진 배열을 반환합니다.', () => {
     expect(getPrevMonthDate(date, 1)).toHaveLength(1);
     expect(getPrevMonthDate(date, 2)).toHaveLength(2);
