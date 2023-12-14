@@ -35,17 +35,17 @@ export const useFunnel = <Steps extends NonEmptyArray<string>>(
   };
 
   const nextStep = (nextQuery: Steps[number]) => {
-    return () => {
-      setCurrentStep(() => {
-        const getSafeParam = safeSearchParams(targetKey);
-        const newPath = createNextStep(targetKey, nextQuery);
-        if (getSafeParam !== nextQuery) {
-          history.pushState('', '', newPath);
-        }
-        return nextQuery;
-      });
-    };
+    const getSafeParam = safeSearchParams(targetKey);
+    const newPath = createNextStep(targetKey, nextQuery);
+    setCurrentStep(() => {
+      return nextQuery;
+    });
+
+    if (getSafeParam !== nextQuery) {
+      history.pushState('', '', newPath);
+    }
   };
+
   React.useEffect(() => {
     const handlePopState = () => {
       const nowStep = safeSearchParams(targetKey) ?? '';
