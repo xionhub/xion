@@ -42,7 +42,7 @@ describe('use-funnel', () => {
           <div
             className=""
             data-testid={'first-step'}
-            onClick={setStep('second')}
+            onClick={() => setStep('second')}
           >
             first
           </div>
@@ -51,7 +51,7 @@ describe('use-funnel', () => {
           <div
             className=""
             data-testid={'seciond-step'}
-            onClick={setStep('third')}
+            onClick={() => setStep('third')}
           >
             second
           </div>
@@ -60,7 +60,7 @@ describe('use-funnel', () => {
           <div
             className=""
             data-testid={'third-step'}
-            onClick={setStep('first')}
+            onClick={() => setStep('first')}
           >
             third
           </div>
