@@ -23,7 +23,7 @@
     "dist"
   ],
   "peerDependencies": {
-    "@xionhub/util": "^0.0.4",
+    "@xionhub/util": "^0.0.5",
     "date-fns": "^2.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
