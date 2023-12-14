@@ -1,7 +1,7 @@
 {
   "name": "@xionhub/util",
   "packageManager": "yarn@4.0.2",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
@@ -20,8 +20,7 @@
     }
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "devDependencies": {
     "@xionhub/esbuild": "workspace:^",
