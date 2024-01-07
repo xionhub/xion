@@ -1,4 +1,4 @@
-import { act, render, renderHook, screen } from '@testing-library/react';
+import { render, renderHook, screen } from '@testing-library/react';
 import { useFunnel } from './use-funnel';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
