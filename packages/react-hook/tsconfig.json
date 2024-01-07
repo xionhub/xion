@@ -11,8 +11,7 @@
     "strictNullChecks": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "emitDeclarationOnly": true,
-    "types": ["@testing-library/jest-dom"]
+    "emitDeclarationOnly": true
   },
   "include": ["src/*"]
 }
