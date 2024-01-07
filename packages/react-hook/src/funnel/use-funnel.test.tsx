@@ -1,5 +1,6 @@
 import { render, renderHook, screen } from '@testing-library/react';
 import { useFunnel } from './use-funnel';
+import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 describe('use-funnel', () => {
