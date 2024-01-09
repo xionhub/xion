@@ -1,3 +1,4 @@
+import { NumberString } from './types/number-string';
 //utils
 import { shallowEqual } from './shallow-equal/shallow-equal';
 import { safeSearchParams } from './safe-search-params/safe-search-params';
@@ -10,7 +11,6 @@ import { isClient } from './is-client/is-client';
 import { assertType } from './assert-type/assert-type';
 import { assert } from './assert/assert';
 import { objectKeysOf } from './object-keys-of/object-keys-of';
-
 //types
 import { HistorySalt } from './types/history-salt';
 import { RecursivePartial } from './types/recursive-partial';
@@ -28,4 +28,5 @@ export {
   isServer,
   HistorySalt,
   RecursivePartial,
+  NumberString,
 };

@@ -14,7 +14,8 @@
     "coverage": "jest --coverage",
     "react": "yarn workspace @xionhub/react-hook",
     "util": "yarn workspace @xionhub/util",
-    "stub": "yarn workspace @xionhub/stub"
+    "stub": "yarn workspace @xionhub/stub",
+    "token": "yarn workspace @xionhub/token"
   },
   "devDependencies": {
     "@testing-library/dom": "^9.3.3",
