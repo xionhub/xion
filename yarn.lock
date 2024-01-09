@@ -1540,6 +1540,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@xionhub/token@workspace:packages/token":
+  version: 0.0.0-use.local
+  resolution: "@xionhub/token@workspace:packages/token"
+  dependencies:
+    "@xionhub/esbuild": "workspace:^"
+    typescript: "npm:5.3.3"
+  languageName: unknown
+  linkType: soft
+
 "@xionhub/util@workspace:^, @xionhub/util@workspace:packages/util":
   version: 0.0.0-use.local
   resolution: "@xionhub/util@workspace:packages/util"
