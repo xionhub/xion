@@ -1,0 +1,30 @@
+{
+  "name": "@xionhub/token",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 💞start react hook build && yarn clean && yarn build:tsc && yarn build:js",
+    "clean": "rm -rf dist",
+    "build:tsc": "yarn tsc --emitDeclarationOnly",
+    "build:js": "node esbuild.js",
+    "prepack": "yarn build && yarn version patch"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
