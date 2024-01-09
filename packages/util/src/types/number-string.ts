@@ -6,11 +6,11 @@ type NumberToString<
   : `${R['length']}` | NumberToString<N, [unknown, ...R]>;
 
 type ExcludeNumbers<
-  T extends string,
   ExcludeFrom extends string,
-> = T extends ExcludeFrom ? never : T;
+  End extends string,
+> = End extends ExcludeFrom ? never : End;
 
 export type NumberString<
-  N extends number,
   Start extends number = 0,
-> = ExcludeNumbers<NumberToString<N>, NumberToString<Start>>;
+  End extends number = 0,
+> = ExcludeNumbers<NumberToString<Start>, NumberToString<End>>;
