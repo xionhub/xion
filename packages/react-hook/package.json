@@ -23,7 +23,6 @@
     "dist"
   ],
   "dependencies": {
-    "@xionhub/esbuild": "workspace:^",
     "@xionhub/util": "workspace:^",
     "date-fns": "^2.0.0"
   },
