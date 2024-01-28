@@ -1777,7 +1777,7 @@ __metadata:
     react: "npm:18.2.0"
     typescript: "npm:^5.3.3"
   peerDependencies:
-    "@xionhub/util": ^0.0.5
+    "@xionhub/util": ^0.0.8
     date-fns: ^2.0.0
     react: ^18.0.0
     react-dom: ^18.0.0
