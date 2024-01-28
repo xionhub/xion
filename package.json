@@ -6,7 +6,6 @@
     "prepack": "pinst --disable",
     "postpack": "pinst --enable",
     "check": "yarn workspaces list --json",
-    "build:all": "yarn workspaces foreach -A run build",
     "push:origin": "git push origin $(git symbolic-ref --short HEAD)",
     "test": "jest --watch --env=jsdom",
     "test:hook": "jest --projects packages/react-hook --watch  --env=jsdom",
@@ -14,10 +13,13 @@
     "coverage": "jest --coverage",
     "react": "yarn workspace @xionhub/react-hook",
     "util": "yarn workspace @xionhub/util",
-    "stub": "yarn workspace @xionhub/stub",
-    "token": "yarn workspace @xionhub/token"
+    "token": "yarn workspace @xionhub/token",
+    "build": "ultra -r build",
+    "release": "yarn changeset publish",
+    "version": "yarn changeset version"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.1",
     "@testing-library/dom": "^9.3.3",
     "@testing-library/jest-dom": "^6.1.5",
     "@testing-library/react": "^14.1.2",
@@ -41,7 +43,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "ts-jest": "^29.1.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "ultra-runner": "^3.10.5"
   },
   "workspaces": [
     "packages/*",
@@ -72,5 +75,10 @@
     "@types/react-dom": "^18",
     "@typescript-eslint/eslint-plugin": "^6.13.1",
     "@typescript-eslint/parser": "^6.13.1"
+  },
+  "ultra": {
+    "concurrent": [
+      "build"
+    ]
   }
 }
