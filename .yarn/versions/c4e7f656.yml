@@ -1,6 +1,0 @@
-releases:
-  "@xionhub/util": patch
-
-undecided:
-  - "@xionhub/react-hook"
-  - "@xionhub/token"
