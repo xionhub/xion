@@ -9,7 +9,7 @@
     "push:origin": "git push origin $(git symbolic-ref --short HEAD)",
     "test": "jest --watch --env=jsdom",
     "test:hook": "jest --projects packages/react-hook --watch  --env=jsdom",
-    "test:all": "jest",
+    "test:all": "jest --maxWorkers 4 --cache",
     "coverage": "jest --coverage",
     "react": "yarn workspace @xionhub/react-hook",
     "util": "yarn workspace @xionhub/util",
