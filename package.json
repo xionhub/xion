@@ -16,7 +16,7 @@
     "token": "yarn workspace @xionhub/token",
     "build": "ultra -r build",
     "release": "yarn changeset publish",
-    "version": "changeset version && yarn install --no-immutable"
+    "version": "yarn changeset version"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
