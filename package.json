@@ -13,7 +13,6 @@
     "coverage": "jest --coverage",
     "react": "yarn workspace @xionhub/react-hook",
     "util": "yarn workspace @xionhub/util",
-    "stub": "yarn workspace @xionhub/stub",
     "token": "yarn workspace @xionhub/token",
     "build": "ultra -r build",
     "release": "yarn changeset publish",
