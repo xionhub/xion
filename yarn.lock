@@ -1777,7 +1777,7 @@ __metadata:
     react: "npm:18.2.0"
     typescript: "npm:^5.3.3"
   peerDependencies:
-    "@xionhub/util": ^0.0.8
+    "@xionhub/util": ^0.0.9
     date-fns: ^2.0.0
     react: ^18.0.0
     react-dom: ^18.0.0
@@ -1814,15 +1814,6 @@ __metadata:
     ts-jest: "npm:^29.1.1"
     typescript: "npm:^5.3.3"
     ultra-runner: "npm:^3.10.5"
-  languageName: unknown
-  linkType: soft
-
-"@xionhub/stub@workspace:packages/stub":
-  version: 0.0.0-use.local
-  resolution: "@xionhub/stub@workspace:packages/stub"
-  dependencies:
-    "@xionhub/esbuild": "workspace:^"
-    typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
 
