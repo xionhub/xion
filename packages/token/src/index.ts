@@ -33,27 +33,71 @@ export const radius = {
   lg: '28px',
   xl: '60px',
   full: '1000px',
+} as const;
+
+export const fontWeight = {
+  thin: 100,
+  extraLight: 200,
+  light: 300,
+  normal: 400,
+  medium: 500,
+  semiBold: 600,
+  bold: 700,
+  extraBold: 800,
+} as const;
+
+export const lineHeight = {
+  tight: '100%',
+  normal: '120%',
+  medium: '150%',
+  wide: '200%',
 };
 
-type NumberToString<N extends number, R extends unknown[] = []> =
-  | `${R['length']}`
-  | (R['length'] extends N ? never : NumberToString<N, [unknown, ...R]>);
-
-type NumberString<N extends number> = Exclude<NumberToString<N>, '0'>;
-
-type SpacingKey = NumberString<40>;
-
-export const spacing = Object.fromEntries(
-  Array.from(Array(40)).map(
-    (_, i) => [`${i + 1}`, `${(i + 1) / 4}rem`] as const,
-  ),
-) as {
-  [key in SpacingKey]: string;
+export const fontSize = {
+  contentSmall: '0.875rem',
+  contentNormal: '1rem',
+  contentHighlight: '1.25rem',
+  captionNormal: '0.5rem',
+  captionHighlight: '0.75rem',
 };
 
+export const spacing = {
+  gutter: '16px',
+  sideMargin: '24px',
+  '1': '4px',
+  '2': '8px',
+  '3': '12px',
+  '4': '16px',
+  '5': '20px',
+  '6': '24px',
+  '7': '28px',
+  '8': '32px',
+};
+const width = {
+  contentWidth: '312px',
+  deviceWidth: '360px',
+  full: '100%',
+  half: '50%',
+  '1/3': '33.3%',
+  'w-screen': '100vw',
+};
+
+const height = {
+  'h-screen': '100vh',
+  full: '100%',
+  half: '50%',
+  '1/3': '33.3%',
+  ctaHeight: '52px',
+};
 export const boxShadow = {};
 
 export const token = {
   color,
   radius,
+  boxShadow,
+  lineHeight,
+  fontWeight,
+  width,
+  spacing,
+  height,
 };
