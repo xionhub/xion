@@ -1,5 +1,11 @@
 # @xionhub/util
 
+## 0.0.10
+
+### Patch Changes
+
+- test release
+
 ## 0.0.9
 
 ### Patch Changes
