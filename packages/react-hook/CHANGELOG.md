@@ -1,5 +1,13 @@
 # @xionhub/react-hook
 
+## 0.0.21
+
+### Patch Changes
+
+- test release
+- Updated dependencies
+  - @xionhub/util@0.0.10
+
 ## 0.0.19
 
 ### Patch Changes
