@@ -1,4 +1,24 @@
 {
   "name": "@xionhub/assert",
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.0.2",
+  "scripts": {
+    "build": "echo 💞start react hook build && yarn clean && yarn build:tsc && yarn build:js",
+    "clean": "rm -rf dist",
+    "build:tsc": "yarn tsc --emitDeclarationOnly",
+    "build:js": "node esbuild.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
