@@ -8,8 +8,7 @@
     "build": "echo 💞start token build && yarn clean && yarn build:tsc && yarn build:js",
     "clean": "rm -rf dist",
     "build:tsc": "yarn tsc --emitDeclarationOnly",
-    "build:js": "node esbuild.js",
-    "prepack": "yarn build && yarn version patch"
+    "build:js": "node esbuild.js"
   },
   "exports": {
     ".": {
