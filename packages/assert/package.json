@@ -1,11 +1,12 @@
 {
-  "name": "@xionhub/util",
+  "name": "@xionhub/assert",
   "packageManager": "yarn@4.0.2",
-  "version": "0.0.10",
+  "version": "0.0.2",
   "main": "dist/index.js",
+  "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "echo 💞start util build && yarn clean && yarn build:tsc && yarn build:js",
+    "build": "echo 💞start react hook build && yarn clean && yarn build:tsc && yarn build:js",
     "clean": "rm -rf dist",
     "build:tsc": "yarn tsc --emitDeclarationOnly",
     "build:js": "node esbuild.js"
@@ -21,11 +22,11 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@xionhub/esbuild": "workspace:^",
     "typescript": "^5.3.3"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
