@@ -1822,7 +1822,7 @@ __metadata:
   resolution: "@xionhub/token@workspace:packages/token"
   dependencies:
     "@xionhub/esbuild": "workspace:^"
-    typescript: "npm:5.3.3"
+    typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
 
