@@ -1,6 +1,10 @@
 {
   "name": "@xionhub/assert",
   "packageManager": "yarn@4.0.2",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "type": "module",
   "scripts": {
     "build": "echo 💞start react hook build && yarn clean && yarn build:tsc && yarn build:js",
     "clean": "rm -rf dist",
@@ -20,5 +24,8 @@
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
   }
 }
