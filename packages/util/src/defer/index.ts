@@ -1,4 +1,4 @@
-import { delay } from '../delay/delay';
+import { delay } from '../delay';
 
 export const defer =
   <T>(callback: () => Promise<T>, ms: number) =>

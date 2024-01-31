@@ -1,4 +1,4 @@
-import { objectKeysOf } from './object-keys-of';
+import { objectKeysOf } from './index';
 describe('object-keys-of', () => {
   it('타입을 적절히 추론할 수 있습니다.', () => {
     const obj = {

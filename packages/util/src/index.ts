@@ -1,7 +1,10 @@
 //utils
-import { shallowEqual } from './shallow-equal/shallow-equal';
-import { objectValues } from './object-values/object-values';
-import { objectKeysOf } from './object-keys-of/object-keys-of';
+import { shallowEqual } from './shallow-equal';
+import { defer } from './defer';
+import { delay } from './delay';
+import { objectValues } from './object-values';
+import { objectKeysOf } from './object-keys-of';
+import { objectEntries } from './object-entries';
 //types
 import { RecursivePartial } from './types/recursive-partial';
 import { NumberString } from './types/number-string';
@@ -10,8 +13,11 @@ import { NonEmptyArray } from './types/non-empty-array';
 
 export {
   objectKeysOf,
-  shallowEqual,
   objectValues,
+  objectEntries,
+  shallowEqual,
+  defer,
+  delay,
   RecursivePartial,
   NumberString,
   NonEmptyArray,
