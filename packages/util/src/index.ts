@@ -5,6 +5,7 @@ import { delay } from './delay';
 import { objectValues } from './object-values';
 import { objectKeysOf } from './object-keys-of';
 import { objectEntries } from './object-entries';
+import { convertListToObject } from './convert-list-to-object';
 //types
 import { RecursivePartial } from './types/recursive-partial';
 import { NumberString } from './types/number-string';
@@ -16,6 +17,7 @@ export {
   objectValues,
   objectEntries,
   shallowEqual,
+  convertListToObject,
   defer,
   delay,
   RecursivePartial,
