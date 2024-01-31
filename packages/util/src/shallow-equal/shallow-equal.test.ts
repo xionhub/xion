@@ -1,5 +1,4 @@
-import { shallowEqual } from './shallow-equal';
-
+import { shallowEqual } from './index';
 describe('shallow-equal', () => {
   afterEach(() => {
     jest.clearAllMocks();
