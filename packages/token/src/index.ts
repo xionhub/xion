@@ -1,103 +1,135 @@
-export const color = {
-  neutral100: '#2C2932',
-  neutral80: 'hsla(257, 4%, 34%, 1)',
-  neutral60: 'rgba(44, 41, 50, 0.60);',
-  neutral30: 'rgba(44, 41, 50, 0.30);',
-  neutral20: 'rgba(44, 41, 50, 0.20);',
-  neutral10: 'rgba(44, 41, 50, 0.10);',
-  gray100: '#455268',
-  gray80: '#718096',
-  gray60: '#91A3BD',
-  gray30: '#C9D8E9',
-  gray20: '#DAE6F3',
-  gray10: '#F4F9FF',
-  primary100: '#313df4',
-  primary80: '#5a75ef',
-  primary60: '#8c9ef1',
-  primary30: '#b7ccf4',
-  primary20: '#daecff',
-  primary10: '#e8f3ff',
-  negative100: '#FF6C58',
-  negative50: '#718096',
-  negative10: '#FFF0EE',
-  positive100: '#3366FF',
-  positive50: '#99B2FF',
-  positive10: '#EBF0FF',
-  white: '#FFFFFF',
-  black: 'hsla(0, 0%, 0%, 1)',
+const colors = {
+  inherit: 'inherit',
+  current: 'currentColor',
+  transparent: 'tranparent',
+  background: 'hsl(var(--background))',
+  foreground: 'hsl(var(--foreground))',
+
+  primary: {
+    DEFAULT: 'hsl(var(--primary))',
+    foreground: 'hsl(var(--primary-foreground) / 90%)',
+  },
+  secondary: {
+    DEFAULT: 'hsl(var(--secondary))',
+    foreground: 'hsl(var(--secondary-foreground))',
+  },
+  negative: {
+    DEFAULT: 'hsl(var(--negative))',
+    foreground: 'hsl(var(--negative-foreground))',
+  },
+  positive: {
+    DEFAULT: 'hsl(var(--positive))',
+    foreground: 'hsl(var(--positive-foreground))',
+  },
+
+  white: {
+    DEFAULT: 'hsl(var(--white))',
+  },
+
+  neutral: {
+    DEFAULT: 'hsl(var(--neutral))',
+  },
+
+  color: {
+    'primary-hover': 'hsl(var(--primary) / 80%)',
+    'primary-active': 'hsl(var(--primary) / 70%)',
+    primary: 'hsl(var(--primary))',
+    'neutral-accent': 'hsl(var(--neutral) / 90%)',
+    neutral: 'hsl(var(--neutral) / 70%)',
+    'white-accent': 'hsl(var(--white) /90%)',
+    white: 'hsl(var(--white) /70%)',
+    'success-accent': 'hsl(var(--positive) / 100%)',
+    success: 'hsl(var(--positive) / 80%)',
+    'danger-accent': 'hsl(var(--negative) / 100%)',
+    danger: 'hsl(var(--negative) / 80%)',
+    muted: 'hsl(var(--background) / 30%)',
+  },
 } as const;
 
-export const radius = {
-  sm: '10px',
-  md: '20px',
-  lg: '28px',
-  xl: '60px',
-  full: '1000px',
+const borderRadius = {
+  xs: 'var(--radius)',
+  sm: 'calc(var(--radius) * 2)',
+  md: 'calc(var(--radius) * 3)',
+  lg: 'calc(var(--radius) * 4)',
+  xl: 'calc(var(--radius) * 6)',
+  '2xl': 'calc(var(--radius) * 8)',
+  '3xl': 'calc(var(--radius) * 10)',
+  full: '999px',
 } as const;
 
-export const fontWeight = {
-  thin: 100,
-  extraLight: 200,
-  light: 300,
-  normal: 400,
-  medium: 500,
-  semiBold: 600,
-  bold: 700,
-  extraBold: 800,
-} as const;
-
-export const lineHeight = {
-  tight: '100%',
-  normal: '120%',
-  medium: '150%',
-  wide: '200%',
-};
-
-export const fontSize = {
-  contentSmall: '0.875rem',
-  contentNormal: '1rem',
-  contentHighlight: '1.25rem',
-  captionNormal: '0.5rem',
-  captionHighlight: '0.75rem',
-};
-
-export const spacing = {
-  gutter: '16px',
-  sideMargin: '24px',
-  '1': '4px',
-  '2': '8px',
-  '3': '12px',
-  '4': '16px',
-  '5': '20px',
-  '6': '24px',
-  '7': '28px',
-  '8': '32px',
-};
-const width = {
-  contentWidth: '312px',
-  deviceWidth: '360px',
-  full: '100%',
-  half: '50%',
+const spacing = {
+  '0': '0px',
+  '2': 'var(--spacing)',
+  '4': 'calc(var(--spacing) * 2)',
+  '6': 'calc(var(--spacing) * 3)',
+  '8': 'calc(var(--spacing) * 4)',
+  '12': 'calc(var(--spacing) * 6)',
+  '16': 'calc(var(--spacing) * 8)',
+  '24': 'calc(var(--spacing) * 12)',
+  '32': 'calc(var(--spacing) * 16)',
+  '48': 'calc(var(--spacing) * 24)',
+  '64': 'calc(var(--spacing) * 32)',
+  '128': 'calc(var(--spacing) * 64)',
+  '256': 'calc(var(--spacing) * 128)',
+  '512': 'calc(var(--spacing) * 256)',
+  '1024': 'calc(var(--spacing) * 512)',
   '1/3': '33.3%',
-  'w-screen': '100vw',
-};
-
-const height = {
-  'h-screen': '100vh',
-  full: '100%',
   half: '50%',
-  '1/3': '33.3%',
-  ctaHeight: '52px',
-};
-export const boxShadow = {};
+  full: '100%',
+} as const;
 
-export const token = {
-  color,
-  radius,
-  boxShadow,
-  lineHeight,
-  fontWeight,
-  width,
+const fontSize = {
+  'header-1': 'calc(var(--font-size) * 2)',
+  'header-2': 'calc(var(--font-size) * 1.75)',
+  'sub-title-1': 'calc(var(--font-size) * 1.125)',
+  'sub-title-2': 'calc(var(--font-size) * 1)',
+  'sub-title-3': 'calc(var(--font-size) * 0.875)',
+  'sub-title-4': 'calc(var(--font-size) * 0.75)',
+  'body-1': 'calc(var(--font-size) * 1)',
+  'body-2': 'calc(var(--font-size) * 0.875)',
+  'caption-1': 'calc(var(--font-size) * 0.75)',
+  'caption-2': 'calc(var(--font-size) * 0.625)',
+} as const;
+
+const fontWeight = {
+  'header-1': '700',
+  'header-2': '700',
+  'sub-title-1': '600',
+  'sub-title-2': '600',
+  'sub-title-3': '600',
+  'sub-title-4': '600',
+  'body-1': '500',
+  'body-2': '500',
+  'caption-1': '500',
+  'caption-2': '400',
+} as const;
+
+const lineHeight = {
+  'header-1': '128%',
+  'header-2': '133%',
+  'sub-title-1': '133%',
+  'sub-title-2': '150%',
+  'sub-title-3': '143%',
+  'sub-title-4': '150%',
+  'body-1': '150%',
+  'body-2': '143%',
+  'caption-1': '150%',
+  'caption-2': '120%',
+} as const;
+
+const boxShadow = {
+  xs: 'rgba(0, 0, 0, 0.16) 0px 1px 4px',
+  sm: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
+  md: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
+  lg: 'rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px',
+} as const;
+
+export const XION_STYLE = {
+  colors,
+  borderRadius,
   spacing,
-  height,
+  fontSize,
+  fontWeight,
+  lineHeight,
+  boxShadow,
 };
