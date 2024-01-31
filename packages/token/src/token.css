@@ -41,3 +41,8 @@
   --secondary: 218 20% 34%;
   --secondary-foreground: 0 0% 100%;
 }
+@media (max-width: 768px) {
+  :root {
+    --font-size: 0.75rem; /* 모바일 기기에서 조정된 폰트 크기 */
+  }
+}
