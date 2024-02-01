@@ -1,6 +1,6 @@
 import plugin from 'tailwindcss/plugin';
 
-export const xionPlugin = plugin(function ({ addUtilities }) {
+export default plugin(function ({ addUtilities }) {
   addUtilities({
     '.fixed-center': {
       position: 'fixed',
