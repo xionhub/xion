@@ -1,8 +1,8 @@
 {
   "name": "@xionhub/tailwind-plugin",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "",
-  "main": "dist/index.js",
+  "main": "./src/index.ts",
   "type": "module",
   "scripts": {
     "build": "echo 💞start tailwind plugin build && yarn clean && yarn build:tsc && yarn build:js",
@@ -10,16 +10,8 @@
     "build:tsc": "yarn tsc --emitDeclarationOnly",
     "build:js": "node esbuild.js"
   },
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js",
-      "default": "./dist/index.js"
-    }
-  },
   "files": [
-    "dist"
+    "src/*"
   ],
   "publishConfig": {
     "access": "public"
@@ -28,9 +20,11 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@xionhub/esbuild": "workspace:^",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "tailwindcss": ">=3.0.0"
   },
   "packageManager": "yarn@4.0.2"
 }
