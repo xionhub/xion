@@ -1884,6 +1884,8 @@ __metadata:
   dependencies:
     tailwindcss: "npm:^3.4.1"
     typescript: "npm:^5.3.3"
+  peerDependencies:
+    tailwindcss: ">=3.0.0"
   languageName: unknown
   linkType: soft
 
