@@ -1,5 +1,18 @@
 # @xionhub/react-hook
 
+## 1.0.0
+
+### Minor Changes
+
+- 마이너 버전 수정
+
+### Patch Changes
+
+- 65b5b21: assert add
+- Updated dependencies [65b5b21]
+- Updated dependencies
+  - @xionhub/util@0.1.0
+
 ## 0.0.21
 
 ### Patch Changes
