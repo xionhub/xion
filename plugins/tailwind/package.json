@@ -4,12 +4,7 @@
   "description": "",
   "main": "./src/index.ts",
   "type": "module",
-  "scripts": {
-    "build": "echo 💞start tailwind plugin build && yarn clean && yarn build:tsc && yarn build:js",
-    "clean": "rm -rf dist",
-    "build:tsc": "yarn tsc --emitDeclarationOnly",
-    "build:js": "node esbuild.js"
-  },
+  "scripts": {},
   "files": [
     "src/*"
   ],
