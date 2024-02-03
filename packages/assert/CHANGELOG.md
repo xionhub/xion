@@ -1,4 +1,4 @@
-# @xionhub/esbuild
+# @xionhub/assert
 
 ## 0.1.0
 
@@ -6,8 +6,6 @@
 
 - 마이너 버전 수정
 
-## 0.0.2
-
 ### Patch Changes
 
-- test release
+- 65b5b21: assert add
