@@ -1766,7 +1766,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xionhub/device@workspace:packages/device":
+"@xionhub/device@workspace:^, @xionhub/device@workspace:packages/device":
   version: 0.0.0-use.local
   resolution: "@xionhub/device@workspace:packages/device"
   dependencies:
@@ -1788,15 +1788,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xionhub/fetch@workspace:packages/fetch":
-  version: 0.0.0-use.local
-  resolution: "@xionhub/fetch@workspace:packages/fetch"
-  dependencies:
-    "@xionhub/esbuild": "workspace:^"
-    typescript: "npm:^5.3.3"
-  languageName: unknown
-  linkType: soft
-
 "@xionhub/funnel@workspace:packages/funnel":
   version: 0.0.0-use.local
   resolution: "@xionhub/funnel@workspace:packages/funnel"
@@ -1810,12 +1801,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xionhub/logger@workspace:packages/logger"
   dependencies:
+    "@xionhub/device": "workspace:^"
     "@xionhub/esbuild": "workspace:^"
+    "@xionhub/pubsub": "workspace:^"
     typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
 
-"@xionhub/pubsub@workspace:packages/pubsub":
+"@xionhub/pubsub@workspace:^, @xionhub/pubsub@workspace:packages/pubsub":
   version: 0.0.0-use.local
   resolution: "@xionhub/pubsub@workspace:packages/pubsub"
   dependencies:
