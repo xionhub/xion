@@ -8,10 +8,10 @@
   --neutral: 0 0% 4%;
   --white: 0 0% 100%;
 
-  --positive: 225 70% 60%;
+  --positive: 225 100% 60%;
   --positive-foreground: 0 0% 100%;
 
-  --negative: 7 70% 67%;
+  --negative: 0 100% 53%;
   --negative-foreground: 0 0% 100%;
 
   --primary: 120 90 40;
@@ -29,10 +29,10 @@
   --neutral: 0 0% 4%;
   --white: 0 0% 100%;
 
-  --positive: 225 70% 60%;
+  --positive: 225 100% 60%;
   --positive-foreground: 0 0% 100%;
 
-  --negative: 7 70% 67%;
+  --negative: 0 100% 53%;
   --negative-foreground: 0 0% 100%;
 
   --primary: 0 0% 6%;
@@ -44,5 +44,11 @@
 @media (max-width: 768px) {
   :root {
     --font-size: 0.75rem; /* 모바일 기기에서 조정된 폰트 크기 */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --font-size: 0.875rem;
   }
 }

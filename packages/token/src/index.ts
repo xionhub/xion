@@ -21,11 +21,9 @@ const colors = {
     DEFAULT: 'hsl(var(--positive))',
     foreground: 'hsl(var(--positive-foreground))',
   },
-
   white: {
     DEFAULT: 'hsl(var(--white))',
   },
-
   neutral: {
     DEFAULT: 'hsl(var(--neutral))',
   },
@@ -33,15 +31,17 @@ const colors = {
   color: {
     'primary-hover': 'hsl(var(--primary) / 80%)',
     'primary-active': 'hsl(var(--primary) / 70%)',
+    foreground: 'hsl(var(--foreground) / 90%)',
+    'foreground-cloudy': 'hsl(var(--foreground) / 60%)',
     primary: 'hsl(var(--primary))',
     'neutral-accent': 'hsl(var(--neutral) / 90%)',
     neutral: 'hsl(var(--neutral) / 70%)',
     'white-accent': 'hsl(var(--white) /90%)',
     white: 'hsl(var(--white) /70%)',
     'success-accent': 'hsl(var(--positive) / 100%)',
-    success: 'hsl(var(--positive) / 80%)',
+    success: 'hsl(var(--positive) / 100%)',
     'danger-accent': 'hsl(var(--negative) / 100%)',
-    danger: 'hsl(var(--negative) / 80%)',
+    danger: 'hsl(var(--negative) / 100%)',
     muted: 'hsl(var(--background) / 30%)',
   },
 } as const;
