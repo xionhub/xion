@@ -1,2 +1,3 @@
-import * as Funnel from './funnel';
-export default Funnel;
+import { useFunnel, Funnel, Step } from './funnel';
+
+export { useFunnel, Funnel, Step };
