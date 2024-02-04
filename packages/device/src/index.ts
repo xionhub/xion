@@ -8,7 +8,7 @@ export class DeviceHelper {
     return typeof w === 'undefined';
   }
   static isIos(): boolean {
-    if (this.isClient()) {
+    if (this.isServer()) {
       return false;
     }
     const ios = /iPhone|IPad|IPod/i;
@@ -16,7 +16,7 @@ export class DeviceHelper {
     return ios.test(nav?.userAgent);
   }
   static isAndroid(): boolean {
-    if (this.isClient()) {
+    if (this.isServer()) {
       return false;
     }
     const android = /Android/i;
