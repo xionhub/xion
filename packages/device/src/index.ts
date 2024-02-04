@@ -12,14 +12,16 @@ export class DeviceHelper {
       return false;
     }
     const ios = /iPhone|IPad|IPod/i;
-    return ios.test(navigator?.userAgent);
+    const nav = navigator;
+    return ios.test(nav?.userAgent);
   }
   static isAndroid(): boolean {
     if (this.isClient()) {
       return false;
     }
     const android = /Android/i;
-    return android.test(navigator?.userAgent);
+    const nav = navigator;
+    return android.test(nav?.userAgent);
   }
   static isWeb(): boolean {
     if (this.isClient()) {
@@ -27,9 +29,8 @@ export class DeviceHelper {
     }
     const android = /Android/i;
     const ios = /iPhone|IPad|IPod/i;
-    return (
-      !android.test(navigator?.userAgent) && !ios.test(navigator?.userAgent)
-    );
+    const nav = navigator;
+    return !android.test(nav?.userAgent) && !ios.test(nav?.userAgent);
   }
   static getDevice(): 'server' | 'ios' | 'android' | 'web' | 'unknown' {
     if (this.isServer()) {
