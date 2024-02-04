@@ -48,7 +48,8 @@
   },
   "workspaces": [
     "packages/*",
-    "configs/*"
+    "configs/*",
+    "plugins/*"
   ],
   "engines": {
     "yarn": "4.x"

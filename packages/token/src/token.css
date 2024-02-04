@@ -1,0 +1,33 @@
+:root {
+  --spacing: 2px;
+  --font-size: 1rem;
+
+  --background: 0 0% 100%;
+  --foreground: 0 0% 4%;
+
+  --white: 0 0% 100%;
+
+  --radius: 2px;
+}
+.dark {
+  --spacing: 2px;
+  --font-size: 1rem;
+
+  --background: 0 0% 3.9%;
+  --foreground: 0 0% 98%;
+
+  --white: 0 0% 100%;
+
+  --radius: 2px;
+}
+@media (max-width: 768px) {
+  :root {
+    --font-size: 0.75rem; /* 모바일 기기에서 조정된 폰트 크기 */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --font-size: 0.875rem;
+  }
+}

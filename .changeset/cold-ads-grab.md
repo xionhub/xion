@@ -1,0 +1,5 @@
+---
+'@xionhub/device': patch
+---
+
+build
