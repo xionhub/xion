@@ -1,41 +1,37 @@
 export class DeviceHelper {
-  ios: RegExp;
-  android: RegExp;
-  constructor() {
-    this.ios = /iPhone|IPad|IPod/i;
-    this.android = /Android/i;
-  }
-
-  isClient(): boolean {
+  static isClient(): boolean {
     const w = window;
     return typeof w !== 'undefined';
   }
-  isServer(): boolean {
+  static isServer(): boolean {
     const w = window;
     return typeof w === 'undefined';
   }
-  isIos(): boolean {
+  static isIos(): boolean {
     if (this.isClient()) {
       return false;
     }
-    return this.ios.test(navigator?.userAgent);
+    const ios = /iPhone|IPad|IPod/i;
+    return ios.test(navigator?.userAgent);
   }
-  isAndroid(): boolean {
+  static isAndroid(): boolean {
     if (this.isClient()) {
       return false;
     }
-    return this.android.test(navigator?.userAgent);
+    const android = /Android/i;
+    return android.test(navigator?.userAgent);
   }
-  isWeb(): boolean {
+  static isWeb(): boolean {
     if (this.isClient()) {
       return false;
     }
+    const android = /Android/i;
+    const ios = /iPhone|IPad|IPod/i;
     return (
-      !this.android.test(navigator?.userAgent) &&
-      !this.ios.test(navigator?.userAgent)
+      !android.test(navigator?.userAgent) && !ios.test(navigator?.userAgent)
     );
   }
-  getDevice(): 'server' | 'ios' | 'android' | 'web' | 'unknown' {
+  static getDevice(): 'server' | 'ios' | 'android' | 'web' | 'unknown' {
     if (this.isServer()) {
       return 'server';
     }
