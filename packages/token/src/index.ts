@@ -1,103 +1,157 @@
-export const color = {
-  neutral100: '#2C2932',
-  neutral80: 'hsla(257, 4%, 34%, 1)',
-  neutral60: 'rgba(44, 41, 50, 0.60);',
-  neutral30: 'rgba(44, 41, 50, 0.30);',
-  neutral20: 'rgba(44, 41, 50, 0.20);',
-  neutral10: 'rgba(44, 41, 50, 0.10);',
-  gray100: '#455268',
-  gray80: '#718096',
-  gray60: '#91A3BD',
-  gray30: '#C9D8E9',
-  gray20: '#DAE6F3',
-  gray10: '#F4F9FF',
-  primary100: '#313df4',
-  primary80: '#5a75ef',
-  primary60: '#8c9ef1',
-  primary30: '#b7ccf4',
-  primary20: '#daecff',
-  primary10: '#e8f3ff',
-  negative100: '#FF6C58',
-  negative50: '#718096',
-  negative10: '#FFF0EE',
-  positive100: '#3366FF',
-  positive50: '#99B2FF',
-  positive10: '#EBF0FF',
-  white: '#FFFFFF',
-  black: 'hsla(0, 0%, 0%, 1)',
+const colors = {
+  inherit: 'inherit',
+  current: 'currentColor',
+  transparent: 'tranparent',
+  background: 'hsl(var(--background))',
+  foreground: 'hsl(var(--foreground))',
+  white: {
+    DEFAULT: 'hsl(var(--white))',
+  },
+  neutral: {
+    '50': 'oklch(97.64% 0.00 286.38)',
+    '100': 'oklch(94.88% 0.01 308.39)',
+    '200': 'oklch(88.34% 0.01 296.33)',
+    '300': 'oklch(78.10% 0.02 298.09)',
+    '400': 'oklch(65.25% 0.04 294.94)',
+    '500': 'oklch(55.34% 0.04 295.18)',
+    '600': 'oklch(47.65% 0.04 297.67)',
+    '700': 'oklch(41.54% 0.03 298.66)',
+    '800': 'oklch(37.52% 0.03 299.35)',
+    '900': 'oklch(34.46% 0.02 296.73)',
+    '950': 'oklch(28.79% 0.02 300.56)',
+  },
+
+  gray: {
+    '50': 'oklch(97.59% 0.00 264.54)',
+    '100': 'oklch(94.87% 0.01 264.53)',
+    '200': 'oklch(88.64% 0.01 258.35)',
+    '300': 'oklch(78.54% 0.03 257.66)',
+    '400': 'oklch(66.43% 0.04 256.00)',
+    '500': 'oklch(56.71% 0.05 256.31)',
+    '600': 'oklch(48.56% 0.04 259.21)',
+    '700': 'oklch(43.63% 0.04 260.85)',
+    '800': 'oklch(38.05% 0.03 259.74)',
+    '900': 'oklch(34.99% 0.02 258.37)',
+    '950': 'oklch(26.85% 0.02 266.30)',
+  },
+  negative: {
+    '50': 'oklch(97.30% 0.01 28.86)',
+    '100': 'oklch(94.19% 0.03 28.12)',
+    '200': 'oklch(89.21% 0.06 27.69)',
+    '300': 'oklch(82.01% 0.10 27.67)',
+    '400': 'oklch(70.98% 0.18 30.08)',
+    '500': 'oklch(66.45% 0.21 30.93)',
+    '600': 'oklch(60.30% 0.21 31.16)',
+    '700': 'oklch(52.86% 0.19 31.19)',
+    '800': 'oklch(46.45% 0.16 31.20)',
+    '900': 'oklch(41.31% 0.13 30.97)',
+    '950': 'oklch(26.90% 0.09 31.35)',
+  },
+  primary: {
+    '50': 'oklch(96.58% 0.02 262.75)',
+    '100': 'oklch(92.09% 0.04 265.84)',
+    '200': 'oklch(86.25% 0.07 264.54)',
+    '300': 'oklch(77.58% 0.11 261.99)',
+    '400': 'oklch(66.54% 0.18 263.45)',
+    '500': 'oklch(57.26% 0.23 265.28)',
+    '600': 'oklch(49.86% 0.26 265.53)',
+    '700': 'oklch(44.82% 0.26 265.71)',
+    '800': 'oklch(38.88% 0.22 267.11)',
+    '900': 'oklch(34.71% 0.17 268.45)',
+    '950': 'oklch(25.91% 0.11 271.90)',
+  },
+
+  color: {
+    'border-default': 'oklch(44.82% 0.26 265.71)', // primary 700
+    'border-danger': 'oklch(52.86% 0.19 31.19)', // negative 700
+    'border-soft': 'oklch(66.54% 0.18 263.45)',
+  },
 } as const;
 
-export const radius = {
-  sm: '10px',
-  md: '20px',
-  lg: '28px',
-  xl: '60px',
-  full: '1000px',
+const borderRadius = {
+  xs: 'var(--radius)',
+  sm: 'calc(var(--radius) * 2)',
+  md: 'calc(var(--radius) * 3)',
+  lg: 'calc(var(--radius) * 4)',
+  xl: 'calc(var(--radius) * 6)',
+  '2xl': 'calc(var(--radius) * 8)',
+  '3xl': 'calc(var(--radius) * 10)',
+  full: '999px',
 } as const;
 
-export const fontWeight = {
-  thin: 100,
-  extraLight: 200,
-  light: 300,
-  normal: 400,
-  medium: 500,
-  semiBold: 600,
-  bold: 700,
-  extraBold: 800,
-} as const;
-
-export const lineHeight = {
-  tight: '100%',
-  normal: '120%',
-  medium: '150%',
-  wide: '200%',
-};
-
-export const fontSize = {
-  contentSmall: '0.875rem',
-  contentNormal: '1rem',
-  contentHighlight: '1.25rem',
-  captionNormal: '0.5rem',
-  captionHighlight: '0.75rem',
-};
-
-export const spacing = {
-  gutter: '16px',
-  sideMargin: '24px',
-  '1': '4px',
-  '2': '8px',
-  '3': '12px',
-  '4': '16px',
-  '5': '20px',
-  '6': '24px',
-  '7': '28px',
-  '8': '32px',
-};
-const width = {
-  contentWidth: '312px',
-  deviceWidth: '360px',
-  full: '100%',
-  half: '50%',
+const spacing = {
+  '0': '0px',
+  '2': 'var(--spacing)',
+  '4': 'calc(var(--spacing) * 2)',
+  '6': 'calc(var(--spacing) * 3)',
+  '8': 'calc(var(--spacing) * 4)',
+  '12': 'calc(var(--spacing) * 6)',
+  '16': 'calc(var(--spacing) * 8)',
+  '24': 'calc(var(--spacing) * 12)',
+  '32': 'calc(var(--spacing) * 16)',
+  '48': 'calc(var(--spacing) * 24)',
+  '64': 'calc(var(--spacing) * 32)',
+  '128': 'calc(var(--spacing) * 64)',
+  '256': 'calc(var(--spacing) * 128)',
+  '512': 'calc(var(--spacing) * 256)',
+  '1024': 'calc(var(--spacing) * 512)',
   '1/3': '33.3%',
-  'w-screen': '100vw',
-};
-
-const height = {
-  'h-screen': '100vh',
-  full: '100%',
   half: '50%',
-  '1/3': '33.3%',
-  ctaHeight: '52px',
-};
-export const boxShadow = {};
+  full: '100%',
+} as const;
 
-export const token = {
-  color,
-  radius,
-  boxShadow,
-  lineHeight,
-  fontWeight,
-  width,
+const fontSize = {
+  'header-1': 'calc(var(--font-size) * 2)',
+  'header-2': 'calc(var(--font-size) * 1.75)',
+  'sub-title-1': 'calc(var(--font-size) * 1.125)',
+  'sub-title-2': 'calc(var(--font-size) * 1)',
+  'sub-title-3': 'calc(var(--font-size) * 0.875)',
+  'sub-title-4': 'calc(var(--font-size) * 0.75)',
+  'body-1': 'calc(var(--font-size) * 1)',
+  'body-2': 'calc(var(--font-size) * 0.875)',
+  'caption-1': 'calc(var(--font-size) * 0.75)',
+  'caption-2': 'calc(var(--font-size) * 0.625)',
+} as const;
+
+const fontWeight = {
+  'header-1': '700',
+  'header-2': '700',
+  'sub-title-1': '600',
+  'sub-title-2': '600',
+  'sub-title-3': '600',
+  'sub-title-4': '600',
+  'body-1': '500',
+  'body-2': '500',
+  'caption-1': '500',
+  'caption-2': '400',
+} as const;
+
+const lineHeight = {
+  'header-1': '128%',
+  'header-2': '133%',
+  'sub-title-1': '133%',
+  'sub-title-2': '150%',
+  'sub-title-3': '143%',
+  'sub-title-4': '150%',
+  'body-1': '150%',
+  'body-2': '143%',
+  'caption-1': '150%',
+  'caption-2': '120%',
+} as const;
+
+const boxShadow = {
+  xs: 'rgba(0, 0, 0, 0.16) 0px 1px 4px',
+  sm: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
+  md: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
+  lg: 'rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px',
+} as const;
+
+export const XION_STYLE = {
+  colors,
+  borderRadius,
   spacing,
-  height,
+  fontSize,
+  fontWeight,
+  lineHeight,
+  boxShadow,
 };

@@ -1,15 +1,14 @@
 {
-  "name": "@xionhub/token",
-  "version": "0.1.2",
+  "name": "@xionhub/funnel",
+  "version": "0.1.0",
   "description": "",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "build": "echo 💞start token build && yarn clean && yarn build:tsc && yarn build:js && yarn copy:css",
+    "build": "echo 💞start token build && yarn clean && yarn build:tsc && yarn build:js",
     "clean": "rm -rf dist",
     "build:tsc": "yarn tsc --emitDeclarationOnly",
-    "build:js": "node esbuild.js",
-    "copy:css": "cp src/token.css dist/token.css"
+    "build:js": "node esbuild.js"
   },
   "exports": {
     ".": {
@@ -17,12 +16,10 @@
       "require": "./dist/index.cjs",
       "import": "./dist/index.js",
       "default": "./dist/index.js"
-    },
-    "./style": "./dist/token.css"
+    }
   },
   "files": [
-    "dist",
-    "src/*"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
@@ -31,8 +28,18 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@types/react": "^18.2.39",
+    "@types/react-dom": "^18",
     "@xionhub/esbuild": "workspace:^",
+    "next": "^14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "next": ">=13.0.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
   },
   "packageManager": "yarn@4.0.2"
 }
