@@ -1,5 +1,11 @@
 # @xionhub/device
 
+## 0.2.0
+
+### Minor Changes
+
+- minor version up
+
 ## 0.1.1
 
 ### Patch Changes
