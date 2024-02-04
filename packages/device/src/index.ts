@@ -8,23 +8,18 @@ export class DeviceHelper {
     return typeof w === 'undefined';
   }
   static isIos(): boolean {
-    if (this.isServer()) {
-      return false;
-    }
     const ios = /iPhone|IPad|IPod/i;
     const nav = navigator;
     return ios.test(nav?.userAgent);
   }
   static isAndroid(): boolean {
-    if (this.isServer()) {
-      return false;
-    }
     const android = /Android/i;
     const nav = navigator;
     return android.test(nav?.userAgent);
   }
   static isWeb(): boolean {
-    if (this.isClient()) {
+    const w = window;
+    if (typeof w === 'undefined') {
       return false;
     }
     const android = /Android/i;
@@ -33,16 +28,16 @@ export class DeviceHelper {
     return !android.test(nav?.userAgent) && !ios.test(nav?.userAgent);
   }
   static getDevice(): 'server' | 'ios' | 'android' | 'web' | 'unknown' {
-    if (this.isServer()) {
+    if (DeviceHelper.isServer()) {
       return 'server';
     }
-    if (this.isIos()) {
+    if (DeviceHelper.isIos()) {
       return 'ios';
     }
-    if (this.isAndroid()) {
+    if (DeviceHelper.isAndroid()) {
       return 'android';
     }
-    if (this.isWeb()) {
+    if (DeviceHelper.isWeb()) {
       return 'web';
     }
     return 'unknown';
