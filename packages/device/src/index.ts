@@ -7,10 +7,12 @@ export class DeviceHelper {
   }
 
   isClient(): boolean {
-    return typeof window !== 'undefined';
+    const w = window;
+    return typeof w !== 'undefined';
   }
   isServer(): boolean {
-    return typeof window === 'undefined';
+    const w = window;
+    return typeof w === 'undefined';
   }
   isIos(): boolean {
     if (this.isClient()) {
