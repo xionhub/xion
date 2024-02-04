@@ -4,7 +4,6 @@
   "description": "",
   "main": "./src/index.ts",
   "type": "module",
-  "scripts": {},
   "files": [
     "src/*"
   ],
