@@ -5,41 +5,20 @@
   --background: 0 0% 100%;
   --foreground: 0 0% 4%;
 
-  --neutral: 0 0% 4%;
   --white: 0 0% 100%;
-
-  --positive: 225 100% 60%;
-  --positive-foreground: 0 0% 100%;
-
-  --negative: 0 100% 53%;
-  --negative-foreground: 0 0% 100%;
-
-  --primary: 120 90 40;
-  --primary-foreground: 0 0% 100%;
-
-  --secondary: 218 20% 34%;
-  --secondary-foreground: 0 0% 100%;
 
   --radius: 2px;
 }
 .dark {
+  --spacing: 2px;
+  --font-size: 1rem;
+
   --background: 0 0% 3.9%;
   --foreground: 0 0% 98%;
 
-  --neutral: 0 0% 4%;
   --white: 0 0% 100%;
 
-  --positive: 225 100% 60%;
-  --positive-foreground: 0 0% 100%;
-
-  --negative: 0 100% 53%;
-  --negative-foreground: 0 0% 100%;
-
-  --primary: 0 0% 6%;
-  --primary-foreground: 0 0% 100%;
-
-  --secondary: 218 20% 34%;
-  --secondary-foreground: 0 0% 100%;
+  --radius: 2px;
 }
 @media (max-width: 768px) {
   :root {
