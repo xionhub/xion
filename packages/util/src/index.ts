@@ -6,6 +6,8 @@ import { objectValues } from './object-values';
 import { objectKeysOf } from './object-keys-of';
 import { objectEntries } from './object-entries';
 import { convertListToObject } from './convert-list-to-object';
+import { commaize } from './commaize';
+import { decommaize } from './decommaize';
 //types
 import { RecursivePartial } from './types/recursive-partial';
 import { NumberString } from './types/number-string';
@@ -20,6 +22,8 @@ export {
   convertListToObject,
   defer,
   delay,
+  commaize,
+  decommaize,
   RecursivePartial,
   NumberString,
   NonEmptyArray,
