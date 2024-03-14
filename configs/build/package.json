@@ -13,5 +13,6 @@
   "peerDependencies": {
     "esbuild": "^0.19.8",
     "esbuild-node-externals": "^1.0.0"
-  }
+  },
+  "private": true
 }
