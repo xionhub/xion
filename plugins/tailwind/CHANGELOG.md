@@ -1,5 +1,11 @@
 # @xionhub/tailwind-plugin
 
+## 0.1.1
+
+### Patch Changes
+
+- test build
+
 ## 0.1.0
 
 ### Minor Changes
