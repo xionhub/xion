@@ -1,5 +1,13 @@
 # @xionhub/device
 
+## 0.2.6
+
+### Patch Changes
+
+- test build
+- b34f002: build
+- 4f30ca0: patch
+
 ## 0.2.0
 
 ### Minor Changes
