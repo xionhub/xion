@@ -1,5 +1,11 @@
 # @xionhub/token
 
+## 0.1.7
+
+### Patch Changes
+
+- test build
+
 ## 0.1.0
 
 ### Minor Changes
