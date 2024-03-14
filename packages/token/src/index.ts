@@ -94,6 +94,7 @@ const spacing = {
   '128': 'calc(var(--spacing) * 64)',
   '256': 'calc(var(--spacing) * 128)',
   '512': 'calc(var(--spacing) * 256)',
+  '768': 'calc(var(--spacing) * 384)',
   '1024': 'calc(var(--spacing) * 512)',
   '1/3': '33.3%',
   half: '50%',
