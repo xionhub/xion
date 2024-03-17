@@ -1,33 +1,104 @@
 :root {
   --spacing: 2px;
   --font-size: 1rem;
-
-  --background: 0 0% 100%;
-  --foreground: 0 0% 4%;
-
   --white: 0 0% 100%;
-
   --radius: 2px;
+
+  --background-50: #fafafa;
+  --background-100: #f4f4f5;
+  --background-200: #e4e4e7;
+  --background-300: #d4d4d8;
+  --background-400: #a1a1aa;
+  --background-500: #71717a;
+  --background-600: #52525b;
+  --background-700: #3f3f46;
+  --background-800: #27272a;
+  --background-900: #18181b;
+
+  --foreground-900: #fafafa;
+  --foreground-800: #f4f4f5;
+  --foreground-700: #e4e4e7;
+  --foreground-600: #d4d4d8;
+  --foreground-500: #a1a1aa;
+  --foreground-400: #71717a;
+  --foreground-300: #52525b;
+  --foreground-200: #3f3f46;
+  --foreground-100: #27272a;
+  --foreground-50: #18181b;
+
+  --primary-50: oklch(96.58% 0.02 262.75);
+  --primary-100: oklch(92.09% 0.04 265.84);
+  --primary-200: oklch(86.25% 0.07 264.54);
+  --primary-300: oklch(77.58% 0.11 261.99);
+  --primary-400: oklch(66.54% 0.18 263.45);
+  --primary-500: oklch(57.26% 0.23 265.28);
+  --primary-600: oklch(49.86% 0.26 265.53);
+  --primary-700: oklch(44.82% 0.26 265.71);
+  --primary-800: oklch(38.88% 0.22 267.11);
+  --primary-900: oklch(34.71% 0.17 268.45);
+  --primary-950: oklch(25.91% 0.11 271.9);
+
+  --negative-50: oklch(97.3% 0.01 28.86);
+  --negative-100: oklch(94.19% 0.03 28.12);
+  --negative-200: oklch(89.21% 0.06 27.69);
+  --negative-300: oklch(82.01% 0.1 27.67);
+  --negative-400: oklch(70.98% 0.18 30.08);
+  --negative-500: oklch(66.45% 0.21 30.93);
+  --negative-600: oklch(60.3% 0.21 31.16);
+  --negative-700: oklch(52.86% 0.19 31.19);
+  --negative-800: oklch(46.45% 0.16 31.2);
+  --negative-900: oklch(41.31% 0.13 30.97);
+  --negative-950: oklch(26.9% 0.09 31.35);
 }
 .dark {
   --spacing: 2px;
   --font-size: 1rem;
-
-  --background: 0 0% 3.9%;
-  --foreground: 0 0% 98%;
-
   --white: 0 0% 100%;
-
   --radius: 2px;
-}
-@media (max-width: 768px) {
-  :root {
-    --font-size: 0.875rem; /* 모바일 기기에서 조정된 폰트 크기 */
-  }
-}
 
-@media (min-width: 769px) and (max-width: 1024px) {
-  :root {
-    --font-size: 0.9375rem;
-  }
+  --background-50: #202124;
+  --background-100: #292a2d;
+  --background-200: #2e3033;
+  --background-300: #343639;
+  --background-400: #3b3d40;
+  --background-500: #424549;
+  --background-600: #494c50;
+  --background-700: #515559;
+  --background-800: #5a5f63;
+  --background-900: #62676b;
+
+  --foreground-900: #e8eaed;
+  --foreground-800: #dee1e5;
+  --foreground-700: #d4d7db;
+  --foreground-600: #cacdd2;
+  --foreground-500: #c0c3c8;
+  --foreground-400: #b6b9be;
+  --foreground-300: #acafb4;
+  --foreground-200: #a2a5aa;
+  --foreground-100: #989ba0;
+  --foreground-50: #8e9196;
+
+  --primary-50: oklch(45% 0.02 262.75); /* 예시 명도 조정 */
+  --primary-100: oklch(47% 0.04 265.84);
+  --primary-200: oklch(49% 0.07 264.54);
+  --primary-300: oklch(51% 0.11 261.99);
+  --primary-400: oklch(53% 0.18 263.45);
+  --primary-500: oklch(55% 0.23 265.28);
+  --primary-600: oklch(57% 0.26 265.53);
+  --primary-700: oklch(59% 0.26 265.71);
+  --primary-800: oklch(61% 0.22 267.11);
+  --primary-900: oklch(63% 0.17 268.45);
+  --primary-950: oklch(65% 0.11 271.9);
+
+  --negative-50: oklch(47.3% 0.01 28.86);
+  --negative-100: oklch(44.19% 0.03 28.12);
+  --negative-200: oklch(39.21% 0.06 27.69);
+  --negative-300: oklch(32.01% 0.1 27.67);
+  --negative-400: oklch(30.98% 0.18 30.08);
+  --negative-500: oklch(26.45% 0.21 30.93);
+  --negative-600: oklch(20.3% 0.21 31.16);
+  --negative-700: oklch(12.86% 0.19 31.19);
+  --negative-800: oklch(6.45% 0.16 31.2);
+  --negative-900: oklch(1.31% 0.13 30.97);
+  --negative-950: oklch(6.9% 0.09 31.35);
 }
