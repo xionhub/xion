@@ -871,14 +871,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:7.23.6", {\
-        "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.23.6-287e8eeec7-d886954e98.zip/node_modules/@babel/runtime/",\
-        "packageDependencies": [\
-          ["@babel/runtime", "npm:7.23.6"],\
-          ["regenerator-runtime", "npm:0.14.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:7.23.9", {\
         "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.23.9-3b96e23cc2-e71205fdd7.zip/node_modules/@babel/runtime/",\
         "packageDependencies": [\
@@ -2815,8 +2807,6 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/user-event", "virtual:234a9ad1d2e09fa017216773ba672d83d4689c8c7a84d9fa0e2510d2fc2563125041b6473dd04fd83eb5fe78a0b14bdd976cc44312340c993fcd0dcb794bf5b1#npm:14.5.1"],\
           ["@types/react", "npm:18.2.40"],\
           ["@xionhub/esbuild", "virtual:252696d8ec9a9800fc31405dce39b310921f90320ea8f2fe42e39acc9d57adf5ae920d7be60be87e2d78b34024618469a677025c0e348fb275350889fd2c3d98#workspace:configs/build"],\
-          ["@xionhub/util", "workspace:packages/util"],\
-          ["date-fns", "npm:2.30.0"],\
           ["react", "npm:18.2.0"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"]\
         ],\
@@ -4068,16 +4058,6 @@ const RAW_RUNTIME_STATE =
           ["abab", "npm:2.0.6"],\
           ["whatwg-mimetype", "npm:3.0.0"],\
           ["whatwg-url", "npm:11.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["date-fns", [\
-      ["npm:2.30.0", {\
-        "packageLocation": "./.yarn/cache/date-fns-npm-2.30.0-895c790e0f-e4b521fbf2.zip/node_modules/date-fns/",\
-        "packageDependencies": [\
-          ["date-fns", "npm:2.30.0"],\
-          ["@babel/runtime", "npm:7.23.6"]\
         ],\
         "linkType": "HARD"\
       }]\

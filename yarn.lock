@@ -400,15 +400,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.21.0":
-  version: 7.23.6
-  resolution: "@babel/runtime@npm:7.23.6"
-  dependencies:
-    regenerator-runtime: "npm:^0.14.0"
-  checksum: d886954e985ef8e421222f7a2848884d96a752e0020d3078b920dd104e672fdf23bcc6f51a44313a048796319f1ac9d09c2c88ec8cbb4e1f09174bcd3335b9ff
-  languageName: node
-  linkType: hard
-
 "@babel/template@npm:^7.22.15, @babel/template@npm:^7.3.3":
   version: 7.22.15
   resolution: "@babel/template@npm:7.22.15"
@@ -1912,13 +1903,9 @@ __metadata:
     "@testing-library/user-event": "npm:^14.5.1"
     "@types/react": "npm:18.2.39"
     "@xionhub/esbuild": "workspace:^"
-    "@xionhub/util": "workspace:^"
-    date-fns: "npm:^2.30.0"
     react: "npm:18.2.0"
     typescript: "npm:^5.3.3"
   peerDependencies:
-    "@xionhub/util": ">=0.1.1"
-    date-fns: ">=2.0.0"
     react: ">=18.0.0"
     react-dom: ">=18.0.0"
   languageName: unknown
@@ -1977,7 +1964,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xionhub/util@workspace:^, @xionhub/util@workspace:packages/util":
+"@xionhub/util@workspace:packages/util":
   version: 0.0.0-use.local
   resolution: "@xionhub/util@workspace:packages/util"
   dependencies:
@@ -2984,15 +2971,6 @@ __metadata:
     whatwg-mimetype: "npm:^3.0.0"
     whatwg-url: "npm:^11.0.0"
   checksum: 051c3aaaf3e961904f136aab095fcf6dff4db23a7fc759dd8ba7b3e6ba03fc07ef608086caad8ab910d864bd3b5e57d0d2f544725653d77c96a2c971567045f4
-  languageName: node
-  linkType: hard
-
-"date-fns@npm:^2.30.0":
-  version: 2.30.0
-  resolution: "date-fns@npm:2.30.0"
-  dependencies:
-    "@babel/runtime": "npm:^7.21.0"
-  checksum: e4b521fbf22bc8c3db332bbfb7b094fd3e7627de0259a9d17c7551e2d2702608a7307a449206065916538e384f37b181565447ce2637ae09828427aed9cb5581
   languageName: node
   linkType: hard
 
