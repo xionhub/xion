@@ -1,0 +1,7 @@
+{
+  "name": "@xionhub/typescript-config",
+  "packageManager": "yarn@4.0.2",
+  "exports": {
+    "./base": "./tsconfig.base.json"
+  }
+}
