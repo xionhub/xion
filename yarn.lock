@@ -4434,6 +4434,7 @@ __metadata:
     esbuild-node-externals: "npm:^1.11.0"
     eslint: "npm:latest"
     eslint-config-next: "npm:^14.0.3"
+    eslint-plugin-jsx-a11y: "npm:^6.8.0"
     husky: "npm:^8.0.0"
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
@@ -6945,7 +6946,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jsx-a11y@npm:^6.7.1":
+"eslint-plugin-jsx-a11y@npm:^6.7.1, eslint-plugin-jsx-a11y@npm:^6.8.0":
   version: 6.8.0
   resolution: "eslint-plugin-jsx-a11y@npm:6.8.0"
   dependencies:
