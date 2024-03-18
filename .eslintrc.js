@@ -7,7 +7,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'next',
+    'plugin:jsx-a11y/recommended',
   ],
   overrides: [
     {
@@ -25,6 +25,6 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'jsx-a11y'],
   rules: {},
 };
