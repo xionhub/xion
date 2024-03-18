@@ -28,11 +28,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
-  },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.2.22",
     "@storybook/addon-essentials": "^8.0.0",
