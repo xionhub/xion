@@ -1,11 +1,11 @@
 import { ComponentPropsWithoutRef } from 'react';
 
-interface ButtonProps extends ComponentPropsWithoutRef<'div'> {}
+interface ButtonProps extends ComponentPropsWithoutRef<'button'> {}
 
-export const Button = ({ className, ...props }: ButtonProps) => {
+export const Button = ({ ...props }: ButtonProps) => {
   return (
-    <div onClick={() => {}} className={' px-24 text-white bg-primary-300'} {...props}>
+    <button className={' px-24 text-white bg-primary-300'} {...props}>
       dsadsadsa
-    </div>
+    </button>
   );
 };
