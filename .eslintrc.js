@@ -6,6 +6,14 @@ module.exports = {
     node: true,
     jest: true,
   },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+    'import/resolver': {
+      typescript: {},
+    },
+  },
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
@@ -19,15 +27,14 @@ module.exports = {
     'plugin:workspaces/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:import/recommended',
+    'plugin:import/warnings',
   ],
-  plugins: [
-    '@typescript-eslint',
-    'jsx-a11y',
-    'workspaces',
-    'import',
-    'react',
-    'react-hooks',
-  ],
+  plugins: ['@typescript-eslint', 'jsx-a11y', 'workspaces', 'import', 'react', 'react-hooks'],
 
-  rules: {},
+  rules: {
+    'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
+  },
 };
