@@ -1,0 +1,19 @@
+{
+  "name": "@xionhub/rollup",
+  "packageManager": "yarn@4.0.2",
+  "license": "MIT",
+  "version": "0.1.1",
+  "main": "rollup.config.mjs",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/rollup-plugin-peer-deps-external": "^2.2.5",
+    "rollup": "^4.13.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "tslib": "^2.6.2"
+  }
+}
