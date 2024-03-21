@@ -94,12 +94,10 @@ const colors = {
 const borderRadius = {
   xs: 'var(--radius)',
   sm: 'calc(var(--radius) * 2)',
-  md: 'calc(var(--radius) * 3)',
-  lg: 'calc(var(--radius) * 4)',
-  xl: 'calc(var(--radius) * 6)',
-  '2xl': 'calc(var(--radius) * 8)',
-  '3xl': 'calc(var(--radius) * 10)',
-  full: '999px',
+  md: 'calc(var(--radius) * 4)',
+  xl: 'calc(var(--radius) * 8)',
+  circle: '50%',
+  full: '9999px',
 } as const;
 
 const spacing = {
@@ -149,10 +147,10 @@ const fontWeight = {
 } as const;
 
 const lineHeight = {
-  '133%': '133%',
-  '150%': '150%',
-  '166%': '166%',
-  '200%': '200%',
+  denser: '100%',
+  normal: '150%',
+  loose: '180%',
+  looser: '200%',
 } as const;
 
 const boxShadow = {
