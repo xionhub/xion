@@ -9,9 +9,9 @@
     "^~page/(.*)$",
     "^~app/(.*)$",
 
+    "^[~/]",
     "^[./]",
-    "^[../]",
-    "^[*/]"
+    "^[../]"
   ],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true
