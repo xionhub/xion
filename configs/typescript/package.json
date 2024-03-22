@@ -1,0 +1,12 @@
+{
+  "name": "@xionhub/typescript",
+  "packageManager": "yarn@4.0.2",
+  "license": "MIT",
+  "version": "0.0.1",
+  "main": "./tsconfig.base.json",
+  "exports": {
+    "./fsd": "./tsconfig.fsd.json",
+    "./base": "./tsconfig.base.json",
+    "./ds": "./tsconfig.ds.json"
+  }
+}
