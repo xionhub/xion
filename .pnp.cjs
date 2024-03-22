@@ -18,6 +18,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:configs/build"\
     },\
     {\
+      "name": "@xionhub/prettier",\
+      "reference": "workspace:configs/prettier"\
+    },\
+    {\
       "name": "@xionhub/rollup",\
       "reference": "workspace:configs/rollup"\
     },\
@@ -70,6 +74,7 @@ const RAW_RUNTIME_STATE =
     ["@xionhub/esbuild", ["virtual:252696d8ec9a9800fc31405dce39b310921f90320ea8f2fe42e39acc9d57adf5ae920d7be60be87e2d78b34024618469a677025c0e348fb275350889fd2c3d98#workspace:configs/build", "workspace:configs/build"]],\
     ["@xionhub/funnel", ["workspace:packages/funnel"]],\
     ["@xionhub/logger", ["workspace:packages/logger"]],\
+    ["@xionhub/prettier", ["workspace:configs/prettier"]],\
     ["@xionhub/pubsub", ["workspace:packages/pubsub"]],\
     ["@xionhub/react-hook", ["workspace:packages/react-hook"]],\
     ["@xionhub/rollup", ["workspace:configs/rollup"]],\
@@ -7235,6 +7240,15 @@ const RAW_RUNTIME_STATE =
           ["@xionhub/logger", "workspace:packages/logger"],\
           ["@xionhub/esbuild", "virtual:252696d8ec9a9800fc31405dce39b310921f90320ea8f2fe42e39acc9d57adf5ae920d7be60be87e2d78b34024618469a677025c0e348fb275350889fd2c3d98#workspace:configs/build"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@xionhub/prettier", [\
+      ["workspace:configs/prettier", {\
+        "packageLocation": "./configs/prettier/",\
+        "packageDependencies": [\
+          ["@xionhub/prettier", "workspace:configs/prettier"]\
         ],\
         "linkType": "SOFT"\
       }]\

@@ -6,7 +6,7 @@
   "main": "rollup.config.mjs",
   "type": "module",
   "private": true,
-  "devDependencies": {
+  "dependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/rollup-plugin-peer-deps-external": "^2.2.5",
