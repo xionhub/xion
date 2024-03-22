@@ -26,6 +26,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:configs/rollup"\
     },\
     {\
+      "name": "@xionhub/typescript",\
+      "reference": "workspace:configs/typescript"\
+    },\
+    {\
       "name": "@xionhub/assert",\
       "reference": "workspace:packages/assert"\
     },\
@@ -81,6 +85,7 @@ const RAW_RUNTIME_STATE =
     ["@xionhub/root", ["workspace:."]],\
     ["@xionhub/tailwind-plugin", ["workspace:plugins/tailwind"]],\
     ["@xionhub/token", ["workspace:packages/token"]],\
+    ["@xionhub/typescript", ["workspace:configs/typescript"]],\
     ["@xionhub/util", ["workspace:packages/util"]],\
     ["@xionhub/xds", ["workspace:packages/design-system"]]\
   ],\
@@ -7360,6 +7365,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "SOFT"\
       }]\
     ]],\
+    ["@xionhub/typescript", [\
+      ["workspace:configs/typescript", {\
+        "packageLocation": "./configs/typescript/",\
+        "packageDependencies": [\
+          ["@xionhub/typescript", "workspace:configs/typescript"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
     ["@xionhub/util", [\
       ["workspace:packages/util", {\
         "packageLocation": "./packages/util/",\
@@ -7390,6 +7404,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.2.17"],\
           ["@xionhub/rollup", "workspace:configs/rollup"],\
           ["@xionhub/token", "workspace:packages/token"],\
+          ["@xionhub/typescript", "workspace:configs/typescript"],\
           ["autoprefixer", "virtual:3836f93a6e8c837fb1757495ecf24c622f50082871431f446cf208597b30877fc36d5465777d2639287589ffcc4d95ffb707dc418e2e27e8e265c1b75fd062ef#npm:10.4.18"],\
           ["postcss", "npm:8.4.35"],\
           ["react", "npm:18.2.0"],\
