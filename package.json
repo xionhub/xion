@@ -55,7 +55,7 @@
   },
   "workspaces": [
     "packages/*",
-    "configs/*",
+    "configs/**/*",
     "plugins/*"
   ],
   "engines": {

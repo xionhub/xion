@@ -4547,6 +4547,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@xionhub/prettier@workspace:configs/prettier":
+  version: 0.0.0-use.local
+  resolution: "@xionhub/prettier@workspace:configs/prettier"
+  languageName: unknown
+  linkType: soft
+
 "@xionhub/pubsub@workspace:packages/pubsub":
   version: 0.0.0-use.local
   resolution: "@xionhub/pubsub@workspace:packages/pubsub"
