@@ -4653,6 +4653,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@xionhub/typescript@workspace:^, @xionhub/typescript@workspace:configs/typescript":
+  version: 0.0.0-use.local
+  resolution: "@xionhub/typescript@workspace:configs/typescript"
+  languageName: unknown
+  linkType: soft
+
 "@xionhub/util@workspace:packages/util":
   version: 0.0.0-use.local
   resolution: "@xionhub/util@workspace:packages/util"
@@ -4680,6 +4686,7 @@ __metadata:
     "@types/react-dom": "npm:^18"
     "@xionhub/rollup": "workspace:^"
     "@xionhub/token": "workspace:^"
+    "@xionhub/typescript": "workspace:^"
     autoprefixer: "npm:^10.4.18"
     postcss: "npm:^8.4.35"
     react: "npm:^18.2.0"
