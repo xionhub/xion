@@ -4537,6 +4537,15 @@ __metadata:
     "@typescript-eslint/parser": ">=7.0.0"
     eslint-import-resolver-typescript: ">=3.0.0"
     eslint-plugin-import: ">=2.0.0"
+  peerDependenciesMeta:
+    eslint-plugin-jsx-a11y:
+      optional: true
+    eslint-plugin-react:
+      optional: true
+    eslint-plugin-react-hooks:
+      optional: true
+    eslint-plugin-workspaces:
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4708,6 +4717,7 @@ __metadata:
     "@xionhub/token": "workspace:^"
     "@xionhub/typescript": "workspace:^"
     autoprefixer: "npm:^10.4.18"
+    class-variance-authority: "npm:^0.7.0"
     postcss: "npm:^8.4.35"
     postcss-import: "npm:^16.1.0"
     react: "npm:^18.2.0"
@@ -4719,6 +4729,7 @@ __metadata:
     typescript: "npm:^5.4.2"
     vite: "npm:^5.1.6"
   peerDependencies:
+    "@xionhub/token": ">=0.0.1"
     react: ">=18.0.0"
     react-dom: ">=18.0.0"
   languageName: unknown
@@ -5931,6 +5942,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"class-variance-authority@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "class-variance-authority@npm:0.7.0"
+  dependencies:
+    clsx: "npm:2.0.0"
+  checksum: e11c57edf4bf50ef1c97bae41d68885afbaaedba26c48b7cc5dfb033390fed7012147e9532168d8c4f3497fce4dff15e20e6e60b8c9c9a4b0fe26b0e804513db
+  languageName: node
+  linkType: hard
+
 "clean-stack@npm:^2.0.0":
   version: 2.2.0
   resolution: "clean-stack@npm:2.2.0"
@@ -6022,6 +6042,13 @@ __metadata:
   version: 1.0.4
   resolution: "clone@npm:1.0.4"
   checksum: 2176952b3649293473999a95d7bebfc9dc96410f6cbd3d2595cf12fd401f63a4bf41a7adbfd3ab2ff09ed60cb9870c58c6acdd18b87767366fabfc163700f13b
+  languageName: node
+  linkType: hard
+
+"clsx@npm:2.0.0":
+  version: 2.0.0
+  resolution: "clsx@npm:2.0.0"
+  checksum: c09f43b3144a0b7826b6b11b6a111b2c7440831004eecc02d333533c5e58ef0aa5f2dce071d3b25fbb8c8ea97b45df96c74bcc1d51c8c2027eb981931107b0cd
   languageName: node
   linkType: hard
 
