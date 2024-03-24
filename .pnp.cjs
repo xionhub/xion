@@ -7538,6 +7538,7 @@ const RAW_RUNTIME_STATE =
           ["@xionhub/typescript", "workspace:configs/typescript"],\
           ["autoprefixer", "virtual:3836f93a6e8c837fb1757495ecf24c622f50082871431f446cf208597b30877fc36d5465777d2639287589ffcc4d95ffb707dc418e2e27e8e265c1b75fd062ef#npm:10.4.18"],\
           ["postcss", "npm:8.4.35"],\
+          ["postcss-import", "virtual:3836f93a6e8c837fb1757495ecf24c622f50082871431f446cf208597b30877fc36d5465777d2639287589ffcc4d95ffb707dc418e2e27e8e265c1b75fd062ef#npm:16.1.0"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:717204627d5f93f9b677662330667f888be11d663d3b6d9e5330e55e2c0c5a8c6252dd42ae5231a8f6a02738e83fb3d2fd587f8af036388b00d84fd8cf88047b#npm:18.2.0"],\
           ["rollup", "npm:4.13.0"],\
@@ -15709,6 +15710,29 @@ const RAW_RUNTIME_STATE =
           ["postcss-import", "npm:15.1.0"]\
         ],\
         "linkType": "SOFT"\
+      }],\
+      ["npm:16.1.0", {\
+        "packageLocation": "./.yarn/cache/postcss-import-npm-16.1.0-97f2f09176-60e6499354.zip/node_modules/postcss-import/",\
+        "packageDependencies": [\
+          ["postcss-import", "npm:16.1.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:3836f93a6e8c837fb1757495ecf24c622f50082871431f446cf208597b30877fc36d5465777d2639287589ffcc4d95ffb707dc418e2e27e8e265c1b75fd062ef#npm:16.1.0", {\
+        "packageLocation": "./.yarn/__virtual__/postcss-import-virtual-5bb8ea5969/0/cache/postcss-import-npm-16.1.0-97f2f09176-60e6499354.zip/node_modules/postcss-import/",\
+        "packageDependencies": [\
+          ["postcss-import", "virtual:3836f93a6e8c837fb1757495ecf24c622f50082871431f446cf208597b30877fc36d5465777d2639287589ffcc4d95ffb707dc418e2e27e8e265c1b75fd062ef#npm:16.1.0"],\
+          ["@types/postcss", null],\
+          ["postcss", "npm:8.4.35"],\
+          ["postcss-value-parser", "npm:4.2.0"],\
+          ["read-cache", "npm:1.0.0"],\
+          ["resolve", "patch:resolve@npm%3A1.22.8#optional!builtin<compat/resolve>::version=1.22.8&hash=c3c19d"]\
+        ],\
+        "packagePeers": [\
+          "@types/postcss",\
+          "postcss"\
+        ],\
+        "linkType": "HARD"\
       }],\
       ["virtual:3903e2abcca6da181c68e3e2b020ce8f100d606c384b27bb480d49951a24008cb45e54ac92bc5acb3f9572c7f339e46fe691a8e40f22e16c18dac03b8a3a63fc#npm:15.1.0", {\
         "packageLocation": "./.yarn/__virtual__/postcss-import-virtual-1f4f253a7b/0/cache/postcss-import-npm-15.1.0-8b9e86f900-518aee5c83.zip/node_modules/postcss-import/",\

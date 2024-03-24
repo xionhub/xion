@@ -17,7 +17,8 @@
     "build": "ultra -r build",
     "release": "yarn changeset publish",
     "version": "yarn changeset version",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "storybook": "yarn workspace @xionhub/"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
