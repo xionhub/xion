@@ -23,5 +23,19 @@
     "@typescript-eslint/parser": ">=7.0.0",
     "eslint-import-resolver-typescript": ">=3.0.0",
     "eslint-plugin-import": ">=2.0.0"
+  },
+  "peerDependenciesMeta": {
+    "eslint-plugin-jsx-a11y": {
+      "optional": true
+    },
+    "eslint-plugin-react": {
+      "optional": true
+    },
+    "eslint-plugin-react-hooks": {
+      "optional": true
+    },
+    "eslint-plugin-workspaces": {
+      "optional": true
+    }
   }
 }
