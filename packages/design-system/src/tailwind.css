@@ -1,5 +1,3 @@
-@import '@xionhub/token/style';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -41,5 +39,8 @@
   }
   ::-webkit-scrollbar {
     display: none;
+  }
+  input:focus {
+    outline: none;
   }
 }

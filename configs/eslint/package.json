@@ -1,0 +1,41 @@
+{
+  "name": "@xionhub/eslint",
+  "packageManager": "yarn@4.0.2",
+  "license": "MIT",
+  "version": "0.0.1",
+  "exports": {
+    "./base": "./eslintrc.base.json",
+    "./monorepo": "./eslintrc.monorepo.js",
+    "./react": "./eslintrc.react.js"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-workspaces": "^0.10.0"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": ">=7.0.0",
+    "@typescript-eslint/parser": ">=7.0.0",
+    "eslint-import-resolver-typescript": ">=3.0.0",
+    "eslint-plugin-import": ">=2.0.0"
+  },
+  "peerDependenciesMeta": {
+    "eslint-plugin-jsx-a11y": {
+      "optional": true
+    },
+    "eslint-plugin-react": {
+      "optional": true
+    },
+    "eslint-plugin-react-hooks": {
+      "optional": true
+    },
+    "eslint-plugin-workspaces": {
+      "optional": true
+    }
+  }
+}

@@ -5,41 +5,30 @@ export type NonEmptyArray<T> = readonly [T, ...T[]];
 export interface FunnelProps<Steps extends NonEmptyArray<string>> {
   steps: Steps;
   step: Steps[number];
-  children:
-    | Array<React.ReactElement<StepProps<Steps>>>
-    | React.ReactElement<StepProps<Steps>>;
+  children: Array<React.ReactElement<StepProps<Steps>>> | React.ReactElement<StepProps<Steps>>;
 }
 export interface StepProps<Steps extends NonEmptyArray<string>> {
   name: Steps[number];
   onEnter?: () => void;
   children: React.ReactNode;
 }
-export type RouteFunnelProps<Steps extends NonEmptyArray<string>> = Omit<
-  FunnelProps<Steps>,
-  'steps' | 'step'
->;
+export type RouteFunnelProps<Steps extends NonEmptyArray<string>> = Omit<FunnelProps<Steps>, 'steps' | 'step'>;
 
 export type StepChildElementProps = {
   goNextStep: () => Promise<boolean> | void;
   routerBack: () => void;
 };
-export const Funnel = <Steps extends NonEmptyArray<string>>({
-  step,
-  steps,
-  children,
-}: FunnelProps<Steps>) => {
+export const Funnel = <Steps extends NonEmptyArray<string>>({ step, steps, children }: FunnelProps<Steps>) => {
   const validChildren = Children.toArray(children)
     .filter(isValidElement)
-    .filter((item) =>
-      steps.includes((item.props as Partial<StepProps<Steps>>).name ?? ''),
-    ) as Array<React.ReactElement<StepProps<Steps>>>;
-  const targetStep = validChildren.find((child) => child.props.name === step);
+    .filter(item => steps.includes((item.props as Partial<StepProps<Steps>>).name ?? '')) as Array<
+    React.ReactElement<StepProps<Steps>>
+  >;
+  const targetStep = validChildren.find(child => child.props.name === step);
   return <>{targetStep}</>;
 };
 
-export const Step = <Steps extends NonEmptyArray<string>>({
-  children,
-}: StepProps<Steps>) => {
+export const Step = <Steps extends NonEmptyArray<string>>({ children }: StepProps<Steps>) => {
   return <>{children}</>;
 };
 
@@ -47,9 +36,9 @@ export const useFunnel = <Steps extends NonEmptyArray<string>>(
   array: Steps,
   option?: {
     initialStep: Steps[number];
-  },
+  }
 ) => {
-  const [steps, _] = React.useState<Steps>(array);
+  const [steps] = React.useState<Steps>(array);
   const [currentStep, setCurrentStep] = React.useState<Steps[number]>(array[0]);
   const router = useRouter();
   const pathName = usePathname();
@@ -76,6 +65,7 @@ export const useFunnel = <Steps extends NonEmptyArray<string>>(
   }, []);
 
   React.useEffect(() => {
+    // eslint-disable-next-line no-prototype-builtins
     if (option?.hasOwnProperty('initialStep')) {
       const initialPath = `${pathName}?step=${option.initialStep}`;
       setCurrentStep(option.initialStep);
@@ -98,7 +88,7 @@ export const useFunnel = <Steps extends NonEmptyArray<string>>(
         Step: (props: StepProps<Steps>) => {
           return <Step {...props} />;
         },
-      },
+      }
     );
   }, [currentStep, steps]);
   return [FunnelComponent, nextStep] as const;

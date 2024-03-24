@@ -1,0 +1,11 @@
+{
+  "paths": {
+    "~app/*": ["./src/app/*"],
+    "~page/*": ["./src/page/*"],
+    "~widget/*": ["./src/widget/*"],
+    "~feature/*": ["./src/feature/*"],
+    "~entities/*": ["./src/entities/*"],
+    "~shared/*": ["./src/shared/*"],
+    "~/*": ["./*"]
+  }
+}
