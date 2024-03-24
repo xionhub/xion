@@ -7537,6 +7537,7 @@ const RAW_RUNTIME_STATE =
           ["@xionhub/token", "workspace:packages/token"],\
           ["@xionhub/typescript", "workspace:configs/typescript"],\
           ["autoprefixer", "virtual:3836f93a6e8c837fb1757495ecf24c622f50082871431f446cf208597b30877fc36d5465777d2639287589ffcc4d95ffb707dc418e2e27e8e265c1b75fd062ef#npm:10.4.18"],\
+          ["class-variance-authority", "npm:0.7.0"],\
           ["postcss", "npm:8.4.35"],\
           ["postcss-import", "virtual:3836f93a6e8c837fb1757495ecf24c622f50082871431f446cf208597b30877fc36d5465777d2639287589ffcc4d95ffb707dc418e2e27e8e265c1b75fd062ef#npm:16.1.0"],\
           ["react", "npm:18.2.0"],\
@@ -9016,6 +9017,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["class-variance-authority", [\
+      ["npm:0.7.0", {\
+        "packageLocation": "./.yarn/cache/class-variance-authority-npm-0.7.0-1a63840197-e11c57edf4.zip/node_modules/class-variance-authority/",\
+        "packageDependencies": [\
+          ["class-variance-authority", "npm:0.7.0"],\
+          ["clsx", "npm:2.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["clean-stack", [\
       ["npm:2.2.0", {\
         "packageLocation": "./.yarn/cache/clean-stack-npm-2.2.0-a8ce435a5c-1f90262d5f.zip/node_modules/clean-stack/",\
@@ -9113,6 +9124,15 @@ const RAW_RUNTIME_STATE =
           ["is-plain-object", "npm:2.0.4"],\
           ["kind-of", "npm:6.0.3"],\
           ["shallow-clone", "npm:3.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["clsx", [\
+      ["npm:2.0.0", {\
+        "packageLocation": "./.yarn/cache/clsx-npm-2.0.0-afafbbe44a-c09f43b314.zip/node_modules/clsx/",\
+        "packageDependencies": [\
+          ["clsx", "npm:2.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
