@@ -30,12 +30,4 @@ export type LogEventCreator<
     eventPath: readonly [Feature, Page, At, Target];
   } & AnotherObj;
 };
-export type DefaultLogEventType = LogEventCreator<
-  string,
-  string,
-  string,
-  string,
-  string,
-  { type: string },
-  '_'
->;
+export type DefaultLogEventType = LogEventCreator<string, string, string, string, string, { type: string }, '_'>;

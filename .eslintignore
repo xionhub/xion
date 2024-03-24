@@ -9,3 +9,8 @@ coverage
 dist
 lib
 .next
+
+*.js
+*.jsx
+*.mjs
+*.cjs
