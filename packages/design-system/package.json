@@ -2,16 +2,17 @@
   "name": "@xionhub/xds",
   "packageManager": "yarn@4.0.2",
   "main": "dist/index.js",
-  "type": "module",
   "license": "MIT",
   "version": "0.0.1",
   "scripts": {
-    "build": "echo 💞start design-system build && yarn clean && yarn build:tsc && yarn build:js",
+    "build": "echo 💞start design-system build && yarn clean && yarn build:tsc && yarn build:js && yarn copy:font && yarn build:css",
     "clean": "rm -rf dist",
     "build:tsc": "yarn tsc --emitDeclarationOnly",
     "build:js": "rollup -c",
+    "build:css": "tailwindcss -i src/tailwind.css -o dist/xds.css --minify",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "copy:font": "mkdir dist/font && cp src/font/* dist/font"
   },
   "exports": {
     ".": {
@@ -26,7 +27,8 @@
   ],
   "peerDependencies": {
     "react": ">=18.0.0",
-    "react-dom": ">=18.0.0"
+    "react-dom": ">=18.0.0",
+    "@xionhub/token": ">=0.0.1"
   },
   "publishConfig": {
     "access": "public"
@@ -49,6 +51,7 @@
     "@xionhub/typescript": "workspace:^",
     "autoprefixer": "^10.4.18",
     "postcss": "^8.4.35",
+    "postcss-import": "^16.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^4.13.0",
