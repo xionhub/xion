@@ -3,7 +3,7 @@
   "packageManager": "yarn@4.0.2",
   "main": "dist/index.js",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "build": "echo 💞start design-system build && yarn clean && yarn build:tsc && yarn build:js  && yarn copy:font && yarn build:css",
     "clean": "rm -rf dist",
@@ -26,7 +26,7 @@
     "dist"
   ],
   "peerDependencies": {
-    "@xionhub/token": ">=0.0.1",
+    "@xionhub/token": ">=0.1.8",
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0"
   },

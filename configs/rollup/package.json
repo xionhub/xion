@@ -2,7 +2,7 @@
   "name": "@xionhub/rollup",
   "packageManager": "yarn@4.0.2",
   "license": "MIT",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "rollup.config.mjs",
   "type": "module",
   "dependencies": {

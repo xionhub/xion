@@ -1,5 +1,11 @@
 # @xionhub/pubsub
 
+## 0.1.2
+
+### Patch Changes
+
+- ee49c0c: version patch test
+
 ## 0.1.1
 
 ### Patch Changes

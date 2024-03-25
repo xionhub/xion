@@ -2,7 +2,7 @@
   "name": "@xionhub/prettier",
   "packageManager": "yarn@4.0.2",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./prettierrc.base.json",
   "exports": {
     "./fsd": "./prettierrc.fsd.json",
