@@ -9,7 +9,11 @@ export interface ButtonProps extends ComponentPropsWithoutRef<'button'> {}
 type ButtonRef = ElementRef<'button'>;
 
 export const Button = forwardRef<ButtonRef, ButtonProps>(({ ...props }, ref) => {
-  return <button className={' px-24 text-white bg-primary-300'} {...props} ref={ref}></button>;
+  return (
+    <button className={' px-24 text-white bg-primary-300'} {...props} ref={ref}>
+      dsadsa
+    </button>
+  );
 });
 
 Button.displayName = 'Button';
