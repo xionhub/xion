@@ -2,11 +2,14 @@
   "name": "@xionhub/typescript",
   "packageManager": "yarn@4.0.2",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./tsconfig.base.json",
   "exports": {
     "./fsd": "./tsconfig.fsd.json",
     "./base": "./tsconfig.base.json",
     "./ds": "./tsconfig.ds.json"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

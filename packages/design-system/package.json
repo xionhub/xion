@@ -3,16 +3,16 @@
   "packageManager": "yarn@4.0.2",
   "main": "dist/index.js",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
-    "build": "echo 💞start design-system build && yarn clean && yarn build:tsc && yarn build:js && yarn copy:font && yarn build:css",
+    "build": "echo 💞start design-system build && yarn clean && yarn build:tsc && yarn build:js  && yarn copy:font && yarn build:css",
     "clean": "rm -rf dist",
     "build:tsc": "yarn tsc --emitDeclarationOnly",
     "build:js": "rollup -c",
     "build:css": "tailwindcss -i src/tailwind.css -o dist/xds.css --minify",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "copy:font": "mkdir dist/font && cp src/font/* dist/font"
+    "copy:font": "mkdir dist/font && cp src/font/SUIT-Bold.woff2 dist/font/SUIT-Bold.woff2 && cp src/font/SUIT-Light.woff2 dist/font/SUIT-Light.woff2 && cp src/font/SUIT-Medium.woff2 dist/font/SUIT-Medium.woff2 && && cp src/font/SUIT-Regular.woff2 dist/font/SUIT-Regular.woff2 && cp src/font/SUIT-SemiBold.woff2 dist/font/SUIT-SemiBold.woff2"
   },
   "exports": {
     ".": {
@@ -26,7 +26,7 @@
     "dist"
   ],
   "peerDependencies": {
-    "@xionhub/token": ">=0.0.1",
+    "@xionhub/token": ">=0.1.8",
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0"
   },

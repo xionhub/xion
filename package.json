@@ -1,6 +1,6 @@
 {
   "name": "@xionhub/root",
-  "packageManager": "yarn@4.0.2",
+  "packageManager": "yarn@4.1.1",
   "scripts": {
     "postinstall": "husky install",
     "prepack": "pinst --disable",
@@ -16,8 +16,7 @@
     "token": "yarn workspace @xionhub/token",
     "build": "ultra -r build",
     "release": "yarn changeset publish",
-    "version": "yarn changeset version",
-    "lint": "eslint .",
+    "lint": "eslint packages/* --fix",
     "storybook": "yarn workspace @xionhub/xds storybook"
   },
   "devDependencies": {
