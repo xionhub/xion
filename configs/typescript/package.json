@@ -8,5 +8,8 @@
     "./fsd": "./tsconfig.fsd.json",
     "./base": "./tsconfig.base.json",
     "./ds": "./tsconfig.ds.json"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
