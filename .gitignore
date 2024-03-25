@@ -19,3 +19,5 @@ coverage
 
 .ultra.cache.json
 *storybook.log
+
+.env.local
