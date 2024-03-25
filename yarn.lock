@@ -4741,7 +4741,7 @@ __metadata:
     typescript: "npm:^5.4.2"
     vite: "npm:^5.1.6"
   peerDependencies:
-    "@xionhub/token": ">=0.0.1"
+    "@xionhub/token": ">=0.1.8"
     react: ">=18.0.0"
     react-dom: ">=18.0.0"
   languageName: unknown
