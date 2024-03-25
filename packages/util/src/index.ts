@@ -13,7 +13,6 @@ import { RecursivePartial } from './types/recursive-partial';
 import { NumberString } from './types/number-string';
 import { DeepPartial } from './types/deep-partial';
 import { NonEmptyArray } from './types/non-empty-array';
-
 export {
   objectKeysOf,
   objectValues,
