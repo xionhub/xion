@@ -1,5 +1,15 @@
 # @xionhub/util
 
+## 0.2.0
+
+### Minor Changes
+
+- ee74e55: test up
+
+### Patch Changes
+
+- ee49c0c: version patch test
+
 ## 0.1.2
 
 ### Patch Changes

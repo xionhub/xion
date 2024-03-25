@@ -1,5 +1,11 @@
 # @xionhub/device
 
+## 0.2.7
+
+### Patch Changes
+
+- ee49c0c: version patch test
+
 ## 0.2.6
 
 ### Patch Changes
