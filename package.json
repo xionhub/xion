@@ -1,6 +1,6 @@
 {
   "name": "@xionhub/root",
-  "packageManager": "yarn@4.0.2",
+  "packageManager": "yarn@4.1.1",
   "scripts": {
     "postinstall": "husky install",
     "prepack": "pinst --disable",
