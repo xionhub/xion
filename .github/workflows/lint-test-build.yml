@@ -12,6 +12,9 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
+      - name: Install Dependencies
+        run: yarn cache clean && yarn install
+
       - name: Code Quality Check and Testing
         run: |
           yarn lint
