@@ -17,7 +17,7 @@
     "build": "ultra -r build",
     "release": "yarn changeset publish",
     "version": "yarn changeset version",
-    "lint": "eslint .",
+    "lint": "eslint packages/* --fix",
     "storybook": "yarn workspace @xionhub/xds storybook"
   },
   "devDependencies": {
