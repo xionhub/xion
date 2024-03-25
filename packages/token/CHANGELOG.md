@@ -1,5 +1,11 @@
 # @xionhub/token
 
+## 0.1.8
+
+### Patch Changes
+
+- ee49c0c: version patch test
+
 ## 0.1.7
 
 ### Patch Changes
