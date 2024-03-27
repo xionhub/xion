@@ -1,14 +1,13 @@
-name: Lint, Test, and Build
+name: Lint, Test, and Build in Parallel
 on: [push]
 
 jobs:
-  cache-dependencies:
+  setup-cache:
     runs-on: ubuntu-latest
     outputs:
-      yarn-cache: ${{ steps.yarn-cache.outputs.dir }}
+      cache-key: ${{ steps.cache-keys.outputs.cache-key }}
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -16,41 +15,30 @@ jobs:
           node-version-file: '.nvmrc'
           cache: 'yarn'
 
-      - name: Get Yarn Cache Directory
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Generate cache key
+        id: cache-keys
+        run: echo "::set-output name=cache-key::$(yarn cache dir)"
 
-  lint-and-test:
-    needs: cache-dependencies
+  lint:
+    needs: setup-cache
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        package: ['react-hook', 'util', 'token']
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
           cache: 'yarn'
-
-      - name: Use Yarn Cache
-        run: yarn install --frozen-lockfile
 
       - name: Lint
         run: yarn lint
 
-      - name: Test
-        run: yarn workspace @xionhub/${{ matrix.package }} test:all
-
-  build:
-    needs: lint-and-test
+  test:
+    needs: setup-cache
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -58,8 +46,20 @@ jobs:
           node-version-file: '.nvmrc'
           cache: 'yarn'
 
-      - name: Use Yarn Cache
-        run: yarn install --frozen-lockfile
+      - name: Run Tests
+        run: yarn test:all
+
+  build:
+    needs: setup-cache
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
 
       - name: Build
         run: yarn build
