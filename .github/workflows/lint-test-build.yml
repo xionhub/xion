@@ -1,36 +1,60 @@
-name: Release
-
+name: Lint, Test, and Build in Parallel
 on: [push]
 
-concurrency: ${{ github.workflow }}-${{ github.ref }}
-
 jobs:
-  release:
-    name: Release
+  setup-cache:
     runs-on: ubuntu-latest
+    outputs:
+      cache-key: ${{ steps.cache-keys.outputs.cache-key }}
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
           cache: 'yarn'
 
-      - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+      - name: Generate cache key
+        id: cache-keys
+        run: |
+          CACHE_DIR=$(yarn cache dir)
+          echo "Cache directory: $CACHE_DIR"
+          mkdir -p $CACHE_DIR
+          echo "::set-output name=cache-key::$CACHE_DIR"
 
-      - name: Create Release Pull Request or Publish to npm
-        id: changesets
-        uses: changesets/action@v1
+  lint:
+    needs: setup-cache
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          version: yarn changeset version
-          publish: yarn release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
+          cache-dependency-path: ${{ needs.setup-cache.outputs.cache-key }}
 
-      - name: Send a Slack notification if a publish happens
-        if: steps.changesets.outputs.published == 'true'
-        run: my-slack-bot send-notification --message "A new version of ${GITHUB_REPOSITORY} was published!"
+      - name: Lint
+        run: yarn lint
+
+  test:
+    needs: setup-cache
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
+          cache-dependency-path: ${{ needs.setup-cache.outputs.cache-key }}
+
+      - name: Run Tests
+        run: yarn test:all
+
+  build:
+    needs: setup-cache
+    runs
