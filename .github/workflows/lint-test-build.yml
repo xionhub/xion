@@ -1,65 +1,24 @@
-name: Lint, Test, and Build in Parallel
+name: Lint Test Build
 on: [push]
-
 jobs:
-  setup-cache:
+  buildci:
     runs-on: ubuntu-latest
-    outputs:
-      cache-key: ${{ steps.cache-keys.outputs.cache-key }}
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
-          cache: 'yarn'
 
-      - name: Generate cache key
-        id: cache-keys
-        run: echo "::set-output name=cache-key::$(yarn cache dir)"
+      - name: Install Dependencies
+        run: yarn cache clean && yarn install
 
-  lint:
-    needs: setup-cache
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: '.nvmrc'
-          cache: 'yarn'
-
-      - name: Lint
-        run: yarn lint
-
-  test:
-    needs: setup-cache
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: '.nvmrc'
-          cache: 'yarn'
-
-      - name: Run Tests
-        run: yarn test:all
-
-  build:
-    needs: setup-cache
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: '.nvmrc'
-          cache: 'yarn'
+      - name: Code Quality Check and Testing
+        run: |
+          yarn lint
+          yarn test:all
 
       - name: Build
         run: yarn build
