@@ -3,8 +3,8 @@ const colors = {
   current: 'currentColor',
   transparent: 'tranparent',
 
-  white: { DEFAULT: 'hsl(var(--white))' },
-  black: { DEFAULT: 'hsl(var(--black))' },
+  white: { DEFAULT: '#ffffff;' },
+  black: { DEFAULT: '#000000' },
 
   neutral: {
     '50': 'var(--neutral-50)',

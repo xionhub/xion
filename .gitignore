@@ -4,7 +4,7 @@
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-!.yarn/cache
+.yarn/cache
 
 node_modules
 # Swap the comments on the following lines if you wish to use zero-installs

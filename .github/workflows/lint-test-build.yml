@@ -1,7 +1,9 @@
 name: Lint Test Build
+
 on: [push]
+
 jobs:
-  buildci:
+  test-lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -11,14 +13,46 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
+          cache: 'yarn'
 
       - name: Install Dependencies
-        run: yarn cache clean && yarn install
+        run: yarn install
 
-      - name: Code Quality Check and Testing
-        run: |
-          yarn lint
-          yarn test:all
+      - name: Lint
+        run: yarn lint
+
+  test-unit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
+
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: Test
+        run: yarn test:all
+
+  test-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
+
+      - name: Install Dependencies
+        run: yarn install
 
       - name: Build
         run: yarn build
