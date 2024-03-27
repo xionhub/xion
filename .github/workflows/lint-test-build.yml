@@ -3,7 +3,7 @@ name: Lint Test Build
 on: [push]
 
 jobs:
-  prepare:
+  prepare-node:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -15,18 +15,8 @@ jobs:
           node-version-file: '.nvmrc'
           cache: 'yarn'
 
-      - name: Install Dependencies
-        run: yarn install
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: yarn-cache
-          path: |
-            .yarn/cache
-            .pnp.*
-
   lint:
-    needs: prepare
+    needs: prepare-node
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -37,15 +27,14 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - uses: actions/download-artifact@v2
-        with:
-          name: yarn-cache
+      - name: Install Dependencies
+        run: yarn install
 
       - name: Lint
         run: yarn lint
 
   test:
-    needs: prepare
+    needs: prepare-node
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -56,15 +45,14 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - uses: actions/download-artifact@v2
-        with:
-          name: yarn-cache
+      - name: Install Dependencies
+        run: yarn install
 
       - name: Test
         run: yarn test:all
 
   build:
-    needs: prepare
+    needs: prepare-node
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -75,9 +63,8 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - uses: actions/download-artifact@v2
-        with:
-          name: yarn-cache
+      - name: Install Dependencies
+        run: yarn install
 
       - name: Build
         run: yarn build
