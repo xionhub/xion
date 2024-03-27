@@ -1,13 +1,13 @@
-name: Lint, Test, and Build in Parallel
+name: Lint Test Build
+
 on: [push]
 
 jobs:
-  setup-cache:
+  prepare:
     runs-on: ubuntu-latest
-    outputs:
-      cache-key: ${{ steps.cache-keys.outputs.cache-key }}
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -15,46 +15,76 @@ jobs:
           node-version-file: '.nvmrc'
           cache: 'yarn'
 
-      - name: Generate cache key
-        id: cache-keys
-        run: |
-          CACHE_DIR=$(yarn cache dir)
-          echo "Cache directory: $CACHE_DIR"
-          mkdir -p $CACHE_DIR
-          echo "::set-output name=cache-key::$CACHE_DIR"
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: Cache Node Modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+  build:
+    needs: prepare
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Use Cached Dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Build
+        run: yarn build
+
+  test:
+    needs: prepare
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Use Cached Dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Test
+        run: yarn test:all
 
   lint:
-    needs: setup-cache
+    needs: prepare
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
-          cache: 'yarn'
-          cache-dependency-path: ${{ needs.setup-cache.outputs.cache-key }}
+
+      - name: Use Cached Dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
 
       - name: Lint
         run: yarn lint
-
-  test:
-    needs: setup-cache
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: '.nvmrc'
-          cache: 'yarn'
-          cache-dependency-path: ${{ needs.setup-cache.outputs.cache-key }}
-
-      - name: Run Tests
-        run: yarn test:all
-
-  build:
-    needs: setup-cache
-    runs
