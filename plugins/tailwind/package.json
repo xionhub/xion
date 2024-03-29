@@ -2,11 +2,18 @@
   "name": "@xionhub/tailwind-plugin",
   "version": "0.1.2",
   "description": "",
-  "main": "./src/index.ts",
+  "main": "dist/index.js",
   "type": "module",
   "files": [
-    "src/*"
+    "dist"
   ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
   "publishConfig": {
     "access": "public"
   },
