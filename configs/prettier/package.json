@@ -2,13 +2,19 @@
   "name": "@xionhub/prettier",
   "packageManager": "yarn@4.1.1",
   "license": "MIT",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./prettierrc.base.json",
   "exports": {
     "./fsd": "./prettierrc.fsd.json",
     "./base": "./prettierrc.base.json",
-    "./fsd.js": "./prettierrc.fsd.js"
+    "./fsdjs": "./prettierrc.fsd.js"
   },
+  "files": [
+    "./prettierrc.base.json",
+    "./prettierrc.fsd.js",
+    "./prettierrc.fsd.json",
+    "./package.json"
+  ],
   "publishConfig": {
     "access": "public"
   }
