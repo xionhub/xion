@@ -4489,15 +4489,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xionhub/device@workspace:packages/device":
-  version: 0.0.0-use.local
-  resolution: "@xionhub/device@workspace:packages/device"
-  dependencies:
-    "@xionhub/esbuild": "workspace:^"
-    typescript: "npm:^5.3.3"
-  languageName: unknown
-  linkType: soft
-
 "@xionhub/esbuild@workspace:^, @xionhub/esbuild@workspace:configs/build":
   version: 0.0.0-use.local
   resolution: "@xionhub/esbuild@workspace:configs/build"
