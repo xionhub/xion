@@ -1,5 +1,11 @@
 # @xionhub/react-hook
 
+## 1.0.3
+
+### Patch Changes
+
+- 9b2ea68: typescript version bump
+
 ## 1.0.2
 
 ### Patch Changes
