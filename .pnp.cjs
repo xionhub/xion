@@ -42,10 +42,6 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:packages/design-system"\
     },\
     {\
-      "name": "@xionhub/device",\
-      "reference": "workspace:packages/device"\
-    },\
-    {\
       "name": "@xionhub/funnel",\
       "reference": "workspace:packages/funnel"\
     },\
@@ -78,7 +74,6 @@ const RAW_RUNTIME_STATE =
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "fallbackExclusionList": [\
     ["@xionhub/assert", ["workspace:packages/assert"]],\
-    ["@xionhub/device", ["workspace:packages/device"]],\
     ["@xionhub/esbuild", ["virtual:252696d8ec9a9800fc31405dce39b310921f90320ea8f2fe42e39acc9d57adf5ae920d7be60be87e2d78b34024618469a677025c0e348fb275350889fd2c3d98#workspace:configs/build", "workspace:configs/build"]],\
     ["@xionhub/eslint", ["workspace:configs/eslint"]],\
     ["@xionhub/funnel", ["workspace:packages/funnel"]],\
@@ -7285,17 +7280,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./packages/assert/",\
         "packageDependencies": [\
           ["@xionhub/assert", "workspace:packages/assert"],\
-          ["@xionhub/esbuild", "virtual:252696d8ec9a9800fc31405dce39b310921f90320ea8f2fe42e39acc9d57adf5ae920d7be60be87e2d78b34024618469a677025c0e348fb275350889fd2c3d98#workspace:configs/build"],\
-          ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"]\
-        ],\
-        "linkType": "SOFT"\
-      }]\
-    ]],\
-    ["@xionhub/device", [\
-      ["workspace:packages/device", {\
-        "packageLocation": "./packages/device/",\
-        "packageDependencies": [\
-          ["@xionhub/device", "workspace:packages/device"],\
           ["@xionhub/esbuild", "virtual:252696d8ec9a9800fc31405dce39b310921f90320ea8f2fe42e39acc9d57adf5ae920d7be60be87e2d78b34024618469a677025c0e348fb275350889fd2c3d98#workspace:configs/build"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"]\
         ],\
