@@ -1,5 +1,11 @@
 # @xionhub/token
 
+## 0.1.9
+
+### Patch Changes
+
+- 9b2ea68: typescript version bump
+
 ## 0.1.8
 
 ### Patch Changes
