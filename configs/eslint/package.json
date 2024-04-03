@@ -2,14 +2,15 @@
   "name": "@xionhub/eslint",
   "packageManager": "yarn@4.1.1",
   "license": "MIT",
-  "version": "0.0.3",
-  "main": "./eslintrc.base.js",
+  "version": "0.0.4",
+  "main": "./index.js",
   "exports": {
     "./base": "./eslintrc.base.json",
     "./monorepo": "./eslintrc.monorepo.js",
     "./react": "./eslintrc.react.js"
   },
   "files": [
+    "./index.js",
     "./eslintrc.base.js",
     "./eslintrc.monorepo.js",
     "./eslintrc.react.js"
