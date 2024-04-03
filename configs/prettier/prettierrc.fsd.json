@@ -2,14 +2,14 @@
   "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "importOrder": [
     "<THIRD_PARTY_MODULES>",
+    "^[@/]",
     "^~shared/(.*)$",
     "^~entities/(.*)$",
-    "^~feature/(.*)$",
-    "^~widget/(.*)$",
-    "^~page/(.*)$",
-    "^~app/(.*)$",
-
-    "^[~/]",
+    "^~features/(.*)$",
+    "^~widgets/(.*)$",
+    "^~pages/(.*)$",
+    "^~apps/(.*)$",
+    "~/(.*)$",
     "^[./]",
     "^[../]"
   ],
