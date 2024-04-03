@@ -1,6 +1,6 @@
 {
   "name": "@xionhub/xds",
-  "packageManager": "yarn@4.0.2",
+  "packageManager": "yarn@4.1.1",
   "main": "dist/index.js",
   "license": "MIT",
   "version": "0.0.3",

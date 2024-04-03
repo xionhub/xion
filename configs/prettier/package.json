@@ -7,8 +7,14 @@
   "exports": {
     "./fsd": "./prettierrc.fsd.json",
     "./base": "./prettierrc.base.json",
-    "./fsd.js": "./prettierrc.fsd.js"
+    "./fsdjs": "./prettierrc.fsd.js"
   },
+  "files": [
+    "./prettierrc.base.json",
+    "./prettierrc.fsd.js",
+    "./prettierrc.fsd.json",
+    "./package.json"
+  ],
   "publishConfig": {
     "access": "public"
   }

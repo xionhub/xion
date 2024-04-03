@@ -1,6 +1,6 @@
 {
   "name": "@xionhub/esbuild",
-  "packageManager": "yarn@4.0.2",
+  "packageManager": "yarn@4.1.1",
   "license": "MIT",
   "version": "0.1.2",
   "main": "build.js",
