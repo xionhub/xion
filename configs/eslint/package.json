@@ -1,13 +1,19 @@
 {
   "name": "@xionhub/eslint",
-  "packageManager": "yarn@4.0.2",
+  "packageManager": "yarn@4.1.1",
   "license": "MIT",
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "main": "./eslintrc.base.js",
   "exports": {
     "./base": "./eslintrc.base.json",
     "./monorepo": "./eslintrc.monorepo.js",
     "./react": "./eslintrc.react.js"
   },
+  "files": [
+    "./eslintrc.base.js",
+    "./eslintrc.monorepo.js",
+    "./eslintrc.react.js"
+  ],
   "devDependencies": {
     "@types/eslint": "^8",
     "@typescript-eslint/eslint-plugin": "^7.3.1",
