@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
-import { generateArgTypes } from '../utils/generate-arg-types';
+import { argTypes } from '../utils/arg-types';
 import { Button } from './button';
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const selectListRounded = ['default', 'xs', 'sm', 'md', 'xl', 'full'] as const;
 const selectListSize = ['full', 'half', 'none'] as const;
 const selectListPress = ['default', 'press'] as const;
-const selectListVariants = ['primary', 'secondary', 'outline'] as const;
+const selectListVariants = ['primary', 'secondary', 'tetiary'] as const;
 
 const meta = {
   title: 'Xds/Button',
@@ -19,10 +19,13 @@ const meta = {
   tags: ['autodocs'],
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
-    variant: generateArgTypes({ control: 'select', options: selectListVariants }),
-    size: generateArgTypes({ control: 'select', options: selectListSize }),
-    press: generateArgTypes({ control: 'select', options: selectListPress }),
-    rounded: generateArgTypes({ control: 'select', options: selectListRounded }),
+    variant: argTypes({ control: 'select', options: selectListVariants }),
+    size: argTypes({ control: 'select', options: selectListSize }),
+    press: argTypes({ control: 'select', options: selectListPress }),
+    rounded: argTypes({ control: 'select', options: selectListRounded }),
+    disabled: argTypes({ control: 'boolean' }),
+    slot: argTypes({ control: 'text' }),
+    slotDirection: argTypes({ control: 'select', options: ['start', 'end', 'none'] }),
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   args: { variant: 'primary' },

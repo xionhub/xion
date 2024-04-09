@@ -60,7 +60,7 @@ type ArgGenerateParameter =
       accept: string;
     };
 
-export const generateArgTypes = (param: ArgGenerateParameter) => {
+export const argTypes = (param: ArgGenerateParameter) => {
   switch (param.control) {
     case 'color':
       return { control: { type: param.control, presetColors: param.presetColors } } as const;
