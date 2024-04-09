@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { argTypes } from '../utils/arg-types';
+import { argTypes } from '../../utils/arg-types';
 import { Button } from './button';
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const selectListRounded = ['default', 'xs', 'sm', 'md', 'xl', 'full'] as const;
