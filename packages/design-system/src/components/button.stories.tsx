@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
 import { argTypes } from '../utils/arg-types';
 import { Button } from './button';
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export

@@ -2,7 +2,10 @@ import { ComponentPropsWithoutRef, ElementRef, ReactElement, ReactNode, forwardR
 import { VariantProps, cva } from 'class-variance-authority';
 
 const buttonVariants = cva(
-  ` text-body-3 flex justify-center items-center gap-x-4 min-w-64 min-h-32 font-suit px-24 py-8 transition-colors duration-300`,
+  ` text-body-3 
+   flex justify-center items-center 
+   gap-x-4 min-w-64 min-h-32 px-24 py-8 
+   transition-colors duration-300`,
   {
     variants: {
       variant: {
