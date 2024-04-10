@@ -5,6 +5,12 @@
 @layer base {
   @font-face {
     font-family: 'SUIT';
+    src: url('./font/SUIT-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'SUIT';
     src: url('./font/SUIT-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
@@ -25,12 +31,6 @@
     font-family: 'SUIT';
     src: url('./font/SUIT-Bold.woff2') format('woff2');
     font-weight: 700;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'SUIT';
-    src: url('./font/SUIT-Light.woff2') format('woff2');
-    font-weight: 300;
     font-style: normal;
   }
 

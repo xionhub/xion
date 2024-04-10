@@ -14,10 +14,13 @@
     "react": "yarn workspace @xionhub/react-hook",
     "util": "yarn workspace @xionhub/util",
     "token": "yarn workspace @xionhub/token",
+    "ds": "yarn workspace @xionhub/xds",
     "build": "ultra -r build",
     "release": "yarn changeset publish",
     "lint": "eslint packages/* --fix",
-    "storybook": "yarn workspace @xionhub/xds storybook"
+    "storybook": "yarn workspace @xionhub/xds storybook",
+    "build-storybook": "yarn workspace @xionhub/xds build-storybook",
+    "chromatic": "yarn workspace @xionhub/xds chromatic"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
@@ -31,6 +34,7 @@
     "@types/react-dom": "^18",
     "@typescript-eslint/eslint-plugin": "^6.13.1",
     "@typescript-eslint/parser": "^6.13.1",
+    "cross-env": "^7.0.3",
     "esbuild": "^0.19.8",
     "esbuild-node-externals": "^1.11.0",
     "eslint": "latest",

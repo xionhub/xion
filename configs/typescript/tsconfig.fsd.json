@@ -3,9 +3,9 @@
     "baseUrl": ".",
     "paths": {
       "~app/*": ["./src/app/*"],
-      "~page/*": ["./src/page/*"],
-      "~widget/*": ["./src/widget/*"],
-      "~feature/*": ["./src/feature/*"],
+      "~pages/*": ["./src/pages/*"],
+      "~widgets/*": ["./src/widgets/*"],
+      "~features/*": ["./src/features/*"],
       "~entities/*": ["./src/entities/*"],
       "~shared/*": ["./src/shared/*"],
       "~/*": ["./*"]

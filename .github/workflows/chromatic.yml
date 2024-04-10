@@ -1,0 +1,36 @@
+name: 'Chromatic'
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '/packages/design-system'
+
+env:
+  CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+
+jobs:
+  chromatic:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: build all
+        run: yarn token build
+
+      - name: Run Chromatic
+        run: yarn chromatic
