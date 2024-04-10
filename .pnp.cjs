@@ -107,6 +107,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.2.17"],\
           ["@typescript-eslint/eslint-plugin", "virtual:717204627d5f93f9b677662330667f888be11d663d3b6d9e5330e55e2c0c5a8c6252dd42ae5231a8f6a02738e83fb3d2fd587f8af036388b00d84fd8cf88047b#npm:6.13.1"],\
           ["@typescript-eslint/parser", "virtual:717204627d5f93f9b677662330667f888be11d663d3b6d9e5330e55e2c0c5a8c6252dd42ae5231a8f6a02738e83fb3d2fd587f8af036388b00d84fd8cf88047b#npm:6.13.1"],\
+          ["cross-env", "npm:7.0.3"],\
           ["esbuild", "npm:0.19.8"],\
           ["esbuild-node-externals", "virtual:717204627d5f93f9b677662330667f888be11d663d3b6d9e5330e55e2c0c5a8c6252dd42ae5231a8f6a02738e83fb3d2fd587f8af036388b00d84fd8cf88047b#npm:1.11.0"],\
           ["eslint", "npm:8.55.0"],\
@@ -7835,6 +7836,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.2.17"],\
           ["@typescript-eslint/eslint-plugin", "virtual:717204627d5f93f9b677662330667f888be11d663d3b6d9e5330e55e2c0c5a8c6252dd42ae5231a8f6a02738e83fb3d2fd587f8af036388b00d84fd8cf88047b#npm:6.13.1"],\
           ["@typescript-eslint/parser", "virtual:717204627d5f93f9b677662330667f888be11d663d3b6d9e5330e55e2c0c5a8c6252dd42ae5231a8f6a02738e83fb3d2fd587f8af036388b00d84fd8cf88047b#npm:6.13.1"],\
+          ["cross-env", "npm:7.0.3"],\
           ["esbuild", "npm:0.19.8"],\
           ["esbuild-node-externals", "virtual:717204627d5f93f9b677662330667f888be11d663d3b6d9e5330e55e2c0c5a8c6252dd42ae5231a8f6a02738e83fb3d2fd587f8af036388b00d84fd8cf88047b#npm:1.11.0"],\
           ["eslint", "npm:8.55.0"],\
@@ -7925,6 +7927,7 @@ const RAW_RUNTIME_STATE =
           ["@xionhub/token", "workspace:packages/token"],\
           ["@xionhub/typescript", "workspace:configs/typescript"],\
           ["autoprefixer", "virtual:3836f93a6e8c837fb1757495ecf24c622f50082871431f446cf208597b30877fc36d5465777d2639287589ffcc4d95ffb707dc418e2e27e8e265c1b75fd062ef#npm:10.4.18"],\
+          ["chromatic", "virtual:3836f93a6e8c837fb1757495ecf24c622f50082871431f446cf208597b30877fc36d5465777d2639287589ffcc4d95ffb707dc418e2e27e8e265c1b75fd062ef#npm:11.3.0"],\
           ["class-variance-authority", "npm:0.7.0"],\
           ["clsx", "npm:2.1.0"],\
           ["postcss", "npm:8.4.35"],\
@@ -9378,6 +9381,30 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["npm:11.3.0", {\
+        "packageLocation": "./.yarn/cache/chromatic-npm-11.3.0-498c3f53d8-e977ef43a4.zip/node_modules/chromatic/",\
+        "packageDependencies": [\
+          ["chromatic", "npm:11.3.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:3836f93a6e8c837fb1757495ecf24c622f50082871431f446cf208597b30877fc36d5465777d2639287589ffcc4d95ffb707dc418e2e27e8e265c1b75fd062ef#npm:11.3.0", {\
+        "packageLocation": "./.yarn/__virtual__/chromatic-virtual-a806e23460/0/cache/chromatic-npm-11.3.0-498c3f53d8-e977ef43a4.zip/node_modules/chromatic/",\
+        "packageDependencies": [\
+          ["chromatic", "virtual:3836f93a6e8c837fb1757495ecf24c622f50082871431f446cf208597b30877fc36d5465777d2639287589ffcc4d95ffb707dc418e2e27e8e265c1b75fd062ef#npm:11.3.0"],\
+          ["@chromatic-com/cypress", null],\
+          ["@chromatic-com/playwright", null],\
+          ["@types/chromatic-com__cypress", null],\
+          ["@types/chromatic-com__playwright", null]\
+        ],\
+        "packagePeers": [\
+          "@chromatic-com/cypress",\
+          "@chromatic-com/playwright",\
+          "@types/chromatic-com__cypress",\
+          "@types/chromatic-com__playwright"\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["virtual:809c351ca3b04c6f61537c7442c12af2f6a4d6c36b37d9600a1c59991f218be6e9f91ae461dcb4722d1bb69b6f94dbcc13e7b0e6c3675ffc0097af854f393e21#npm:11.0.8", {\
         "packageLocation": "./.yarn/__virtual__/chromatic-virtual-e3b21a2295/0/cache/chromatic-npm-11.0.8-916c200fb5-422ab9afd9.zip/node_modules/chromatic/",\
         "packageDependencies": [\
@@ -9766,6 +9793,16 @@ const RAW_RUNTIME_STATE =
           ["jest-config", "virtual:3a6a7b993b4c5b60edc037a265ed4617431cf4c75aee76d6fbd0f2ca65ea68cee61c092e9bd306baebd90cc377234b4a525791e6755ee4d2193076de2c2bdfed#npm:29.7.0"],\
           ["jest-util", "npm:29.7.0"],\
           ["prompts", "npm:2.4.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["cross-env", [\
+      ["npm:7.0.3", {\
+        "packageLocation": "./.yarn/cache/cross-env-npm-7.0.3-96d81820f4-f3765c2574.zip/node_modules/cross-env/",\
+        "packageDependencies": [\
+          ["cross-env", "npm:7.0.3"],\
+          ["cross-spawn", "npm:7.0.3"]\
         ],\
         "linkType": "HARD"\
       }]\
