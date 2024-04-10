@@ -23,5 +23,8 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
+      - name: build all application
+        run: yarn build
+
       - name: Run Chromatic
         run: yarn chromatic
