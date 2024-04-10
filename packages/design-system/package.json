@@ -3,7 +3,7 @@
   "packageManager": "yarn@4.1.1",
   "main": "dist/index.js",
   "license": "MIT",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "build": "echo 💞start design-system build && yarn clean && yarn build:tsc && yarn build:js  && yarn copy:font && yarn build:css",
     "clean": "rm -rf dist",
@@ -29,6 +29,7 @@
   ],
   "peerDependencies": {
     "@radix-ui/react-alert-dialog": ">=1.0.0",
+    "@xionhub/token": ">=0.1.9",
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0"
   },

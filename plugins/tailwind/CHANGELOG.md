@@ -1,5 +1,11 @@
 # @xionhub/tailwind-plugin
 
+## 0.1.3
+
+### Patch Changes
+
+- 9b2ea68: typescript version bump
+
 ## 0.1.2
 
 ### Patch Changes
