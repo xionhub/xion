@@ -17,6 +17,6 @@ jobs:
         run: yarn install
 
       - name: Run Chromatic
-        uses: chromaui/action@latest
-        with:
+        run: yarn chromatic
+        env:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}

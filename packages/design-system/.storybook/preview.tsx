@@ -2,7 +2,7 @@ import React from 'react';
 import type { Preview } from '@storybook/react';
 import '../src/tailwind.css';
 import '../src/token.css';
-
+import '../src/font.css';
 const preview: Preview = {
   parameters: {
     controls: {
