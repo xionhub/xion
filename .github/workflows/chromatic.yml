@@ -30,7 +30,7 @@ jobs:
         run: yarn install
 
       - name: build all
-        run: yarn build
+        run: yarn token build
 
       - name: Run Chromatic
         run: yarn chromatic
