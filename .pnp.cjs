@@ -7874,6 +7874,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@xionhub/token", [\
+      ["npm:0.1.8", {\
+        "packageLocation": "./.yarn/cache/@xionhub-token-npm-0.1.8-62e1a01593-960468afdd.zip/node_modules/@xionhub/token/",\
+        "packageDependencies": [\
+          ["@xionhub/token", "npm:0.1.8"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["workspace:packages/token", {\
         "packageLocation": "./packages/token/",\
         "packageDependencies": [\
@@ -7924,7 +7931,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.2.40"],\
           ["@types/react-dom", "npm:18.2.17"],\
           ["@xionhub/rollup", "workspace:configs/rollup"],\
-          ["@xionhub/token", "workspace:packages/token"],\
+          ["@xionhub/token", "npm:0.1.8"],\
           ["@xionhub/typescript", "workspace:configs/typescript"],\
           ["autoprefixer", "virtual:3836f93a6e8c837fb1757495ecf24c622f50082871431f446cf208597b30877fc36d5465777d2639287589ffcc4d95ffb707dc418e2e27e8e265c1b75fd062ef#npm:10.4.18"],\
           ["chromatic", "virtual:3836f93a6e8c837fb1757495ecf24c622f50082871431f446cf208597b30877fc36d5465777d2639287589ffcc4d95ffb707dc418e2e27e8e265c1b75fd062ef#npm:11.3.0"],\

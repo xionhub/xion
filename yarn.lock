@@ -4950,7 +4950,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xionhub/token@npm:0.1.8, @xionhub/token@workspace:packages/token":
+"@xionhub/token@npm:0.1.8":
+  version: 0.1.8
+  resolution: "@xionhub/token@npm:0.1.8"
+  checksum: 10c0/960468afdd074f0b4b498cc7e82841d701cba8aa71f538363f5ac208c5f11e24ba2d471e05b25c37729e3acb527c6c2ebbe6c729be74de60e9a38fab830fc25d
+  languageName: node
+  linkType: hard
+
+"@xionhub/token@workspace:packages/token":
   version: 0.0.0-use.local
   resolution: "@xionhub/token@workspace:packages/token"
   dependencies:
@@ -5012,6 +5019,7 @@ __metadata:
     vite: "npm:^5.1.6"
   peerDependencies:
     "@radix-ui/react-alert-dialog": ">=1.0.0"
+    "@xionhub/token": ">=0.1.9"
     react: ">=18.0.0"
     react-dom: ">=18.0.0"
   languageName: unknown
