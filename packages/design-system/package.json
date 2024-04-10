@@ -13,6 +13,7 @@
     "build:storybook": "storybook build",
     "build-storybook": "storybook build",
     "storybook": "storybook dev -p 6006",
+    "chromatic": "npx chromatic --auto-accept-changes",
     "copy:font": "mkdir dist/font && cp src/font/SUIT-Bold.woff2 dist/font/SUIT-Bold.woff2 && cp src/font/SUIT-Light.woff2 dist/font/SUIT-Light.woff2 && cp src/font/SUIT-Medium.woff2 dist/font/SUIT-Medium.woff2 && cp src/font/SUIT-Regular.woff2 dist/font/SUIT-Regular.woff2 && cp src/font/SUIT-SemiBold.woff2 dist/font/SUIT-SemiBold.woff2"
   },
   "exports": {
