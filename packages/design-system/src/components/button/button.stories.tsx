@@ -5,7 +5,21 @@ import { Button } from './button';
 const selectListRounded = ['default', 'xs', 'sm', 'md', 'xl', 'full'] as const;
 const selectListSize = ['full', 'half', 'none'] as const;
 const selectListPress = ['default', 'press'] as const;
-const selectListVariants = ['primary', 'secondary', 'tetiary'] as const;
+const selectListVariants = [
+  'primary',
+  'secondary',
+  'tetiary',
+  'ghost',
+  'danger-primary',
+  'danger-secondary',
+  'danger-tetiary',
+  'danger-ghost',
+  'neutral-primary',
+  'neutral-secondary',
+  'neutral-tetiory',
+  'neutral-ghost',
+  'neutral-focus-ghost',
+] as const;
 
 const meta = {
   title: 'Xds/Button',
@@ -33,7 +47,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Small: Story = {
+export const PrimaryButton: Story = {
   args: {
     children: 'button',
     variant: 'primary',
