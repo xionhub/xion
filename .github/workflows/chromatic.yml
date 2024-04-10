@@ -3,7 +3,7 @@ name: 'Chromatic'
 on: push
 env:
   working-directory: ./packages/design-system
-  projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+  CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
 
 jobs:
   chromatic:
