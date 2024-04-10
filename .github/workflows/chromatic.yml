@@ -5,6 +5,8 @@ on: push
 jobs:
   chromatic:
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./packages/design-system
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
