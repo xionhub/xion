@@ -19,7 +19,8 @@
     "release": "yarn changeset publish",
     "lint": "eslint packages/* --fix",
     "storybook": "yarn workspace @xionhub/xds storybook",
-    "build-storybook": "yarn workspace @xionhub/xds storybook build"
+    "build-storybook": "yarn workspace @xionhub/xds storybook build",
+    "chromatic": "yarn workspace @xionhub/xds chromatic"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
