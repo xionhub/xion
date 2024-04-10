@@ -1,6 +1,12 @@
 name: 'Chromatic'
 
-on: push
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '/packages/design-system'
+
 env:
   CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
 
@@ -23,7 +29,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: build all application
+      - name: build all
         run: yarn build
 
       - name: Run Chromatic
